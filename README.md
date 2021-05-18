@@ -5,7 +5,7 @@ The R3B setup – Reactions with radioactive ion beams – investigates nuclear 
 The newly developed versatile experimental setup was constructed to have high efficiency, acceptance and resolution for inverse- kinematic complete measurements. 
 The dedicated CALIFA surrounds the target and can work as spectrometer, calorimeter or hybrid detector. One of the function is to detect photons up to 20 MeV. 
 The focus of this work will be to investigate artificial neural networks to optimize advance gamma reconstruction algorithms. For this both simulations and actual real data are available.
-
+-----
 #Installation
 FairRoot: https://github.com/FairRootGroup/FairRoot.git
 FairSoft: https://github.com/FairRootGroup/FairSoft.git
