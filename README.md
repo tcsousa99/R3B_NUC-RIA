@@ -8,12 +8,12 @@ The focus of this work will be to investigate artificial neural networks to opti
 
 -----
 ## Installation
-FairRoot: https://github.com/FairRootGroup/FairRoot.git
+**FairRoot**: https://github.com/FairRootGroup/FairRoot.git
 
-FairSoft: https://github.com/FairRootGroup/FairSoft.git
+**FairSoft**: https://github.com/FairRootGroup/FairSoft.git
 
 
-R3BRoot:
+**R3BRoot**:
 ```bash
 git clone https://github.com/R3BRootGroup/R3BRoot.git
 cd R3BRoot
