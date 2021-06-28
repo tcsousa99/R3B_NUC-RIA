@@ -1,0 +1,24 @@
+[ R3BTra.so ]
+# List of selected classes
+class R3BAmsCalifaCorrelatedOnlineSpectra
+class R3BAmsMapped2StripCal
+class R3BAmsMapped2StripCalPar
+class R3BAmsMappingPar
+class R3BAmsOnlineSpectra
+class R3BAmsStripCal2Hit
+class R3BAmsStripCalPar
+class R3BGeoTra
+class R3BGeoTraPar
+class R3BTarget2pDigiPar
+class R3BTarget2pDigitizer
+class R3BTargetDigiPar
+class R3BTargetDigitizer
+class R3BTra
+class R3BTra2pDigiPar
+class R3BTra2pDigitizer
+class R3BTraContFact
+class R3BTraDigiPar
+class R3BTraDigitizer
+class R3BTraFraDigiPar
+class R3BTraFraDigitizer
+class R3BTraHitFinder

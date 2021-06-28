@@ -1,0 +1,22 @@
+{ decls }
+namespace Neuland { namespace Calibration {  } }
+
+[ R3BNeulandCalibration.so ]
+# List of selected classes
+class Neuland::Calibration::CosmicTracker
+class Neuland::Calibration::HitCalibrationBar
+class Neuland::Calibration::TSyncer
+class R3BNeulandCal2Hit
+class R3BNeulandCal2HitPar
+class R3BNeulandHitHist
+class R3BNeulandHitModulePar
+class R3BNeulandHitPar
+class R3BNeulandMapped2Cal
+class R3BNeulandMapped2CalPar
+class R3BNeulandMappedHist
+class R3BNeulandParFact
+class R3BNeulandQCalFiller
+class R3BNeulandQCalPar
+class R3BNeulandTacquilaMapped2Cal
+class R3BNeulandTacquilaMapped2CalPar
+class R3BNeulandTacquilaMapped2QCalPar

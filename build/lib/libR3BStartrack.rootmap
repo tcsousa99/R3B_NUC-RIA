@@ -1,0 +1,24 @@
+[ R3BStartrack.so ]
+# List of selected classes
+class R3BGeoStartrack
+class R3BGeoStartrackPar
+class R3BStartrack
+class R3BStartrackCal2Hit
+class R3BStartrackCalib
+class R3BStartrackCalibPar
+class R3BStartrackCalibParFinder
+class R3BStartrackContFact
+class R3BStartrackDigit
+class R3BStartrackEvent
+class R3BStartrackHitPar
+class R3BStartrackMapped2Cal
+class R3BStartrackMapped2CalPar
+class R3BStartrackOrderTS
+class R3BStartrackRawAna
+class R3BStartrackRawHit
+class R3BStartrackRecTS
+class R3BStartrackStripAna
+class R3BStartrackUnpack
+header R3BStartrackCalibPar.h
+header R3BStartrackHitPar.h
+header R3BStartrackMapped2CalPar.h

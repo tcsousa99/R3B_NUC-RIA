@@ -1,0 +1,5 @@
+[ R3BSfib.so ]
+# List of selected classes
+class R3BSfibCal2Hit
+class R3BSfibMapped2Cal
+class R3BSfibMapped2CalPar

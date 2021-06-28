@@ -1,0 +1,5 @@
+[ R3BNeulandUnpack.so ]
+# List of selected classes
+class R3BNeulandPmt
+class R3BNeulandTcal
+class R3BNeulandTcalFill

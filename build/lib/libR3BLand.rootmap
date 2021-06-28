@@ -1,0 +1,16 @@
+[ R3BLand.so ]
+# List of selected classes
+class R3BGeoLand
+class R3BGeoLandPar
+class R3BLand
+class R3BLandContFact
+class R3BLandDigiPar
+class R3BLandDigitizer
+class R3BLandDigitizerQA
+class R3BNeuLandCluster
+class R3BNeuLandClusterFinder
+class R3BNeutHit
+class R3BNeutronCalibr2D
+class R3BNeutronTracker
+class R3BNeutronTracker2D
+class R3BPrimPart

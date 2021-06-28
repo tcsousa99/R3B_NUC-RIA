@@ -1,0 +1,8 @@
+[ R3BFi11.so ]
+# List of selected classes
+class R3BFi11
+class R3BFi11Cal2Hit
+class R3BFi11ContFact
+class R3BFi11Digitizer
+class R3BFi11DigitizerCal
+class R3BFi11Mapped2Cal

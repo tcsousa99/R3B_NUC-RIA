@@ -1,0 +1,24 @@
+[ R3BGen.so ]
+# List of selected classes
+class R3BAsciiGenerator
+class R3BBackTracking
+class R3BBackTrackingStorageState
+class R3BBeamInfo
+class R3BBeamProperties
+class R3BCALIFATestGenerator
+class R3BCDGenerator
+class R3BCosmicGenerator
+class R3BCryAsciiGenerator
+class R3BDistribution1D
+class R3BDistribution2D
+class R3BDistribution3D
+class R3BGammaGenerator
+class R3BIonGenerator
+class R3BLandGenerator
+class R3BParticleGenerator
+class R3BParticleSelector
+class R3BPhaseSpaceGenerator
+class R3BReadKinematics
+class R3BSpecificGenerator
+class R3Bp2pGenerator
+class R3Bp2pevtGenerator

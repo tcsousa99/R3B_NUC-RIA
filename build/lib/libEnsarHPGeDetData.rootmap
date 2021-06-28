@@ -1,0 +1,4 @@
+[ EnsarHPGeDetData.so ]
+# List of selected classes
+class EnsarHPGeDetHit
+class EnsarHPGeDetPoint

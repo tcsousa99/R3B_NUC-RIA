@@ -1,0 +1,33 @@
+[ R3BTof.so ]
+# List of selected classes
+class R3BGeoTof
+class R3BGeoTofPar
+class R3BGeoTofd
+class R3BGeoTofdPar
+class R3BPtofCal2Hit
+class R3BPtofCal2HitPar
+class R3BPtofHitPar
+class R3BPtofMapped2Cal
+class R3BPtofMapped2CalPar
+class R3BPtofParFact
+class R3BTof
+class R3BTof2pDigiPar
+class R3BTof2pDigitizer
+class R3BTofContFact
+class R3BTofDigiPar
+class R3BTofDigitizer
+class R3BTofd
+class R3BTofdCal2Histo
+class R3BTofdCal2HistoPar
+class R3BTofdCal2Hit
+class R3BTofdCal2HitPar
+class R3BTofdCal2HitS454
+class R3BTofdChangePar
+class R3BTofdContFact
+class R3BTofdDigiPar
+class R3BTofdDigitizer
+class R3BTofdDigitizerCal
+class R3BTofdHitModulePar
+class R3BTofdHitPar
+class R3BTofdMapped2Cal
+class R3BTofdMapped2CalPar

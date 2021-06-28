@@ -1,0 +1,10 @@
+{ decls }
+class R3BNeulandCluster;
+template <typename T> class Filterable;
+
+[ R3BNeulandShared.so ]
+# List of selected classes
+class Filterable<R3BNeulandCluster*>
+class R3BNeulandContFact
+class R3BNeulandGeoPar
+class R3BNeulandVisualizer

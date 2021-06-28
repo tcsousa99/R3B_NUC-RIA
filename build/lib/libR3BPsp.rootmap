@@ -1,0 +1,15 @@
+[ R3BPsp.so ]
+# List of selected classes
+class R3BGeoPsp
+class R3BPsp
+class R3BPspDigiPar
+class R3BPspDigitizer
+class R3BPspxCal2Hit
+class R3BPspxCalPar
+class R3BPspxContFact
+class R3BPspxHitPar
+class R3BPspxMapped2Precal
+class R3BPspxMappedPar
+class R3BPspxOnlineSpectra
+class R3BPspxPrecal2Cal
+class R3BPspxPrecalPar

@@ -1,0 +1,1 @@
+/usr/bin/gfortran -fPIC -O2 -g -DNDEBUG  -shared -Wl,-soname,libR3BTraRene.so -o ../lib/libR3BTraRene.so CMakeFiles/R3BTraRene.dir/tracker_routines.f95.o 

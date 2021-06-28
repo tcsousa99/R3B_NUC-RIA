@@ -1,0 +1,11 @@
+[ R3BBunchedFiber.so ]
+# List of selected classes
+class R3BBunchedFiberCal2Hit
+class R3BBunchedFiberHitModulePar
+class R3BBunchedFiberHitPar
+class R3BBunchedFiberMapped2Cal
+class R3BBunchedFiberMapped2CalPar
+class R3BBunchedFiberSPMTTrigDigitizerCal
+class R3BBunchedFiberSPMTTrigMapped2Cal
+class R3BBunchedFiberSPMTTrigMapped2CalPar
+class R3BFiberContFact

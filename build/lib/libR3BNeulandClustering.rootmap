@@ -1,0 +1,4 @@
+[ R3BNeulandClustering.so ]
+# List of selected classes
+class R3BNeulandClusterFinder
+class R3BNeulandClusterMon

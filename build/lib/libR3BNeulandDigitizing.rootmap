@@ -1,0 +1,18 @@
+{ decls }
+namespace Neuland { namespace Digitizing {  } }
+namespace Neuland {  }
+namespace Neuland { namespace TacQuila {  } }
+namespace Neuland { namespace Tamex {  } }
+
+[ R3BNeulandDigitizing.so ]
+# List of selected classes
+class Neuland::Digitizing::Channel
+class Neuland::Digitizing::PMTHit
+class Neuland::Digitizing::Paddle
+class Neuland::DigitizingEngine
+class Neuland::DigitizingTacQuila
+class Neuland::DigitizingTamex
+class Neuland::TacQuila::Channel
+class Neuland::Tamex::Channel
+class R3BNeulandDigitizer
+class R3BNeulandHitMon

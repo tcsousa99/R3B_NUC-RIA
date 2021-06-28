@@ -1,0 +1,9 @@
+[ R3BMusic.so ]
+# List of selected classes
+class R3BMusic
+class R3BMusicCal2Hit
+class R3BMusicCalPar
+class R3BMusicContFact
+class R3BMusicHitPar
+class R3BMusicMapped2Cal
+class R3BMusicOnlineSpectra

@@ -1,0 +1,10 @@
+[ R3BTracking.so ]
+# List of selected classes
+class R3BFragmentFitterChi2
+class R3BFragmentFitterGeneric
+class R3BFragmentTracker
+class R3BTGeoPar
+class R3BTPropagator
+class R3BTrackingDetector
+class R3BTrackingParticle
+class R3BTrackingSetup

@@ -1,0 +1,6 @@
+[ R3BNeulandSimulation.so ]
+# List of selected classes
+class R3BNeuland
+class R3BNeulandMCMon
+class R3BNeulandPrimaryClusterFinder
+class R3BNeulandPrimaryInteractionFinder

@@ -1,0 +1,7 @@
+[ R3BMfi.so ]
+# List of selected classes
+class R3BGeoMfi
+class R3BKeepEventProbabilityMfi
+class R3BMfi
+class R3BMfiDigiPar
+class R3BMfiDigitizer

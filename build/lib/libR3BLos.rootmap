@@ -1,0 +1,6 @@
+[ R3BLos.so ]
+# List of selected classes
+class R3BLosCal2Hit
+class R3BLosMapped2Cal
+class R3BLosMapped2CalPar
+class R3BLosProvideTStart

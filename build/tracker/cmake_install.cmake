@@ -1,0 +1,113 @@
+# Install script for directory: /work/R3BRoot/tracker
+
+# Set the install prefix
+if(NOT DEFINED CMAKE_INSTALL_PREFIX)
+  set(CMAKE_INSTALL_PREFIX "/usr/local")
+endif()
+string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
+
+# Set the install configuration name.
+if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
+  if(BUILD_TYPE)
+    string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
+           CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
+  else()
+    set(CMAKE_INSTALL_CONFIG_NAME "RelWithDebInfo")
+  endif()
+  message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
+endif()
+
+# Set the component getting installed.
+if(NOT CMAKE_INSTALL_COMPONENT)
+  if(COMPONENT)
+    message(STATUS "Install component: \"${COMPONENT}\"")
+    set(CMAKE_INSTALL_COMPONENT "${COMPONENT}")
+  else()
+    set(CMAKE_INSTALL_COMPONENT)
+  endif()
+endif()
+
+# Install shared libraries without execute permission?
+if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
+  set(CMAKE_INSTALL_SO_NO_EXE "1")
+endif()
+
+# Is this installation the result of a crosscompile?
+if(NOT DEFINED CMAKE_CROSSCOMPILING)
+  set(CMAKE_CROSSCOMPILING "FALSE")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE FILE FILES
+    "/work/R3BRoot/tracker/R3BTra.h"
+    "/work/R3BRoot/tracker/R3BGeoTra.h"
+    "/work/R3BRoot/tracker/R3BGeoTraPar.h"
+    "/work/R3BRoot/tracker/R3BTraContFact.h"
+    "/work/R3BRoot/tracker/R3BTraDigiPar.h"
+    "/work/R3BRoot/tracker/R3BTraDigitizer.h"
+    "/work/R3BRoot/tracker/R3BTargetDigiPar.h"
+    "/work/R3BRoot/tracker/R3BTargetDigitizer.h"
+    "/work/R3BRoot/tracker/R3BTra2pDigiPar.h"
+    "/work/R3BRoot/tracker/R3BTra2pDigitizer.h"
+    "/work/R3BRoot/tracker/R3BTraFraDigiPar.h"
+    "/work/R3BRoot/tracker/R3BTraFraDigitizer.h"
+    "/work/R3BRoot/tracker/R3BTarget2pDigiPar.h"
+    "/work/R3BRoot/tracker/R3BTarget2pDigitizer.h"
+    "/work/R3BRoot/tracker/R3BTraHitFinder.h"
+    "/work/R3BRoot/tracker/unpackams/R3BAmsStripCalPar.h"
+    "/work/R3BRoot/tracker/unpackams/R3BAmsMappingPar.h"
+    "/work/R3BRoot/tracker/unpackams/R3BAmsMapped2StripCalPar.h"
+    "/work/R3BRoot/tracker/unpackams/R3BAmsMapped2StripCal.h"
+    "/work/R3BRoot/tracker/unpackams/R3BAmsStripCal2Hit.h"
+    "/work/R3BRoot/tracker/unpackams/R3BAmsOnlineSpectra.h"
+    "/work/R3BRoot/tracker/unpackams/R3BAmsCalifaCorrelatedOnlineSpectra.h"
+    )
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE FILE FILES
+    "/work/R3BRoot/build/lib/G__R3BTraDict_rdict.pcm"
+    "/work/R3BRoot/build/lib/libR3BTra.rootmap"
+    )
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libR3BTra.so.SOVERSION" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libR3BTra.so.SOVERSION")
+    file(RPATH_CHECK
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libR3BTra.so.SOVERSION"
+         RPATH "")
+  endif()
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/work/R3BRoot/build/lib/libR3BTra.so.SOVERSION")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libR3BTra.so.SOVERSION" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libR3BTra.so.SOVERSION")
+    file(RPATH_CHANGE
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libR3BTra.so.SOVERSION"
+         OLD_RPATH "/opt/fairsoft/lib/root:/opt/fairroot/lib:/work/R3BRoot/build/lib:"
+         NEW_RPATH "")
+    if(CMAKE_INSTALL_DO_STRIP)
+      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libR3BTra.so.SOVERSION")
+    endif()
+  endif()
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libR3BTra.so" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libR3BTra.so")
+    file(RPATH_CHECK
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libR3BTra.so"
+         RPATH "")
+  endif()
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/work/R3BRoot/build/lib/libR3BTra.so")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libR3BTra.so" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libR3BTra.so")
+    file(RPATH_CHANGE
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libR3BTra.so"
+         OLD_RPATH "/opt/fairsoft/lib/root:/opt/fairroot/lib:/work/R3BRoot/build/lib:"
+         NEW_RPATH "")
+    if(CMAKE_INSTALL_DO_STRIP)
+      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libR3BTra.so")
+    endif()
+  endif()
+endif()
+

@@ -1,0 +1,20 @@
+[ R3BCalifa.so ]
+# List of selected classes
+class R3BCalifa
+class R3BCalifaContFact
+class R3BCalifaCrystalCal2CrystalCalPID
+class R3BCalifaCrystalCal2Hit
+class R3BCalifaCrystalCal2TotCalPar
+class R3BCalifaCrystalCalDataAnalysis
+class R3BCalifaCrystalCalPar
+class R3BCalifaCrystalPars4Sim
+class R3BCalifaDemoOnlineSpectra
+class R3BCalifaDigitizer
+class R3BCalifaGeometry
+class R3BCalifaHitPar
+class R3BCalifaMapped2CrystalCal
+class R3BCalifaMapped2CrystalCalPar
+class R3BCalifaMappingPar
+class R3BCalifaOnlineSpectra
+class R3BCalifaTotCalPar
+header R3BCalifaCrystalPars4Sim.h

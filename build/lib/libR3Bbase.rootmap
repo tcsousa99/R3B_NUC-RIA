@@ -1,0 +1,20 @@
+[ R3Bbase.so ]
+# List of selected classes
+class R3BDetector
+class R3BEventHeader
+class R3BEventHeaderCal2Hit
+class R3BFileSource
+class R3BGlobalAnalysis
+class R3BGlobalAnalysisS454
+class R3BModule
+class R3BOnlineSpectra
+class R3BOnlineSpectraDec2019
+class R3BOnlineSpectraFiberTofds515
+class R3BOnlineSpectraLosStandalone
+class R3BOnlineSpectraLosVsSci2
+class R3BOnlineSpectraPdc
+class R3BOnlineSpectraSci2
+class R3BOnlineSpectraSfib
+class R3BOnlineSpillAnalysis
+class R3BTrackS454
+class R3BTrackerTestS454

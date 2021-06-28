@@ -1,0 +1,5 @@
+[ R3BStrawtubes.so ]
+# List of selected classes
+class R3BStrawtubesCal2Hit
+class R3BStrawtubesMapped2Cal
+class R3BStrawtubesMapped2CalPar

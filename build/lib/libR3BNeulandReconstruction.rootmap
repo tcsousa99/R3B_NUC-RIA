@@ -1,0 +1,17 @@
+[ R3BNeulandReconstruction.so ]
+# List of selected classes
+class R3BNeulandMultiplicityBayes
+class R3BNeulandMultiplicityBayesPar
+class R3BNeulandMultiplicityBayesTrain
+class R3BNeulandMultiplicityCalorimetric
+class R3BNeulandMultiplicityCalorimetricPar
+class R3BNeulandMultiplicityCalorimetricTrain
+class R3BNeulandMultiplicityCheat
+class R3BNeulandMultiplicityFixed
+class R3BNeulandNeutronReconstructionMon
+class R3BNeulandNeutronReconstructionStatistics
+class R3BNeulandNeutronsCheat
+class R3BNeulandNeutronsRValue
+class R3BNeulandReconstructionContFact
+header R3BNeulandMultiplicityBayesPar.h
+header R3BNeulandMultiplicityCalorimetricPar.h

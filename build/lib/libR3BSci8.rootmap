@@ -1,0 +1,5 @@
+[ R3BSci8.so ]
+# List of selected classes
+class R3BSci8Cal2Hit
+class R3BSci8Mapped2Cal
+class R3BSci8Mapped2CalPar

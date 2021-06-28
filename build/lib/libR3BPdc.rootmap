@@ -1,0 +1,7 @@
+[ R3BPdc.so ]
+# List of selected classes
+class R3BGeoPdcPar
+class R3BPdcCal2Hit
+class R3BPdcContFact
+class R3BPdcMapped2Cal
+class R3BPdcMapped2CalPar
