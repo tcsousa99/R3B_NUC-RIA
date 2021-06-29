@@ -840,19 +840,3 @@ R3BBunchedFiberCal2Hit.h
 R3BBunchedFiberMapped2Cal.h
 /work/R3BRoot/build/fi9/R3BBunchedFiberMapped2Cal.h
 
-/work/R3BRoot/fi9/R3BFi9Cal2Hit.cxx
-R3BFi9Cal2Hit.h
-/work/R3BRoot/fi9/R3BFi9Cal2Hit.h
-
-/work/R3BRoot/fi9/R3BFi9Cal2Hit.h
-R3BBunchedFiberCal2Hit.h
-/work/R3BRoot/fi9/R3BBunchedFiberCal2Hit.h
-
-/work/R3BRoot/fi9/R3BFi9Mapped2Cal.cxx
-R3BFi9Mapped2Cal.h
-/work/R3BRoot/fi9/R3BFi9Mapped2Cal.h
-
-/work/R3BRoot/fi9/R3BFi9Mapped2Cal.h
-R3BBunchedFiberMapped2Cal.h
-/work/R3BRoot/fi9/R3BBunchedFiberMapped2Cal.h
-

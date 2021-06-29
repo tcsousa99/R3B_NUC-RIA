@@ -337,6 +337,9 @@ if(NOT MODULE)
     add_subdirectory(fi2b)
     add_subdirectory(fi3a)
     add_subdirectory(fi3b)
+#------------------------------------------------------------------------#
+    add_subdirectory(fi4t)
+#------------------------------------------------------------------------#
     add_subdirectory(fi4)
     add_subdirectory(fi5)
     add_subdirectory(fi6)
