@@ -46,6 +46,7 @@ enum DetectorId
     kFI3a,
     kFI3b,
     kFI4,
+    kFI4t,
     kFI6,
     kFI7,
     kFI8,

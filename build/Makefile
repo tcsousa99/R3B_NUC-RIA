@@ -727,6 +727,19 @@ R3BFi3b/fast:
 .PHONY : R3BFi3b/fast
 
 #=============================================================================
+# Target rules for targets named R3BFi4t
+
+# Build rule for target.
+R3BFi4t: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 R3BFi4t
+.PHONY : R3BFi4t
+
+# fast build rule for target.
+R3BFi4t/fast:
+	$(MAKE) -f fi4t/CMakeFiles/R3BFi4t.dir/build.make fi4t/CMakeFiles/R3BFi4t.dir/build
+.PHONY : R3BFi4t/fast
+
+#=============================================================================
 # Target rules for targets named R3BFi4
 
 # Build rule for target.
@@ -1380,6 +1393,7 @@ help:
 	@echo "... R3BFi2b"
 	@echo "... R3BFi3a"
 	@echo "... R3BFi3b"
+	@echo "... R3BFi4t"
 	@echo "... R3BFi4"
 	@echo "... R3BFi5"
 	@echo "... R3BFi6"

@@ -46,6 +46,7 @@ c63ffb99a530ab86c7267e09ca5cc39a fi2a/G__R3BFi2aDict.cxx
 0052bbfa3d90ecaccee8a6cf732b5da0 fi3a/G__R3BFi3aDict.cxx
 0c45593e4facccecd70febd3d586299c fi3b/G__R3BFi3bDict.cxx
 7b2f140fa3d6d5fae2f8c70714615179 fi4/G__R3BFi4Dict.cxx
+a59b93b42ca59e8f5801dbec534d3bf4 fi4t/G__R3BFi4tDict.cxx
 bf4a354dfdd6612e27507add8a9d38ee fi5/G__R3BFi5Dict.cxx
 1b57aa1e988728bbacc9cb419e2e6a7c fi6/G__R3BFi6Dict.cxx
 ca0657dca26498b2e8c3f3d36aeac451 fi7/G__R3BFi7Dict.cxx

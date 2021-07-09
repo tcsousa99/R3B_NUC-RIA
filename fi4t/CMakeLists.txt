@@ -50,7 +50,7 @@ link_directories( ${LINK_DIRECTORIES})
 
 set(SRCS
 #Put here your sourcefiles
-R3BFi4.cxx  
+R3BFi4t.cxx  
 # R3BGeoFi4.cxx   
 # R3BGeoFi4Par.cxx   
 R3BFi4ContFact.cxx

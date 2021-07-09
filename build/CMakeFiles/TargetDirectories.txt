@@ -146,6 +146,14 @@
 /work/R3BRoot/build/fi3b/CMakeFiles/edit_cache.dir
 /work/R3BRoot/build/fi3b/CMakeFiles/test.dir
 /work/R3BRoot/build/fi3b/CMakeFiles/rebuild_cache.dir
+/work/R3BRoot/build/fi4t/CMakeFiles/install.dir
+/work/R3BRoot/build/fi4t/CMakeFiles/list_install_components.dir
+/work/R3BRoot/build/fi4t/CMakeFiles/install/strip.dir
+/work/R3BRoot/build/fi4t/CMakeFiles/install/local.dir
+/work/R3BRoot/build/fi4t/CMakeFiles/R3BFi4t.dir
+/work/R3BRoot/build/fi4t/CMakeFiles/rebuild_cache.dir
+/work/R3BRoot/build/fi4t/CMakeFiles/test.dir
+/work/R3BRoot/build/fi4t/CMakeFiles/edit_cache.dir
 /work/R3BRoot/build/fi4/CMakeFiles/install/strip.dir
 /work/R3BRoot/build/fi4/CMakeFiles/install/local.dir
 /work/R3BRoot/build/fi4/CMakeFiles/install.dir
