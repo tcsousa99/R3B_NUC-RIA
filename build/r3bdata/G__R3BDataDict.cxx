@@ -52,6 +52,8 @@ namespace std {} using namespace std;
 #include "califaData/R3BCalifaMappedData.h"
 #include "califaData/R3BCalifaHitData.h"
 #include "califaData/R3BCalifaPoint.h"
+#include "hpgeData/R3BHPGeDetHit.h"
+#include "hpgeData/R3BHPGeDetPoint.h"
 #include "dchData/R3BDchPoint.h"
 #include "dchData/R3BDchFullPoint.h"
 #include "gfiData/R3BGfiPoint.h"
@@ -648,6 +650,38 @@ namespace ROOT {
 } // end of namespace ROOT
 
 namespace ROOT {
+   static void *new_R3BHPGeDetPoint(void *p = 0);
+   static void *newArray_R3BHPGeDetPoint(Long_t size, void *p);
+   static void delete_R3BHPGeDetPoint(void *p);
+   static void deleteArray_R3BHPGeDetPoint(void *p);
+   static void destruct_R3BHPGeDetPoint(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const ::R3BHPGeDetPoint*)
+   {
+      ::R3BHPGeDetPoint *ptr = 0;
+      static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BHPGeDetPoint >(0);
+      static ::ROOT::TGenericClassInfo 
+         instance("R3BHPGeDetPoint", ::R3BHPGeDetPoint::Class_Version(), "", 1319,
+                  typeid(::R3BHPGeDetPoint), ::ROOT::Internal::DefineBehavior(ptr, ptr),
+                  &::R3BHPGeDetPoint::Dictionary, isa_proxy, 4,
+                  sizeof(::R3BHPGeDetPoint) );
+      instance.SetNew(&new_R3BHPGeDetPoint);
+      instance.SetNewArray(&newArray_R3BHPGeDetPoint);
+      instance.SetDelete(&delete_R3BHPGeDetPoint);
+      instance.SetDeleteArray(&deleteArray_R3BHPGeDetPoint);
+      instance.SetDestructor(&destruct_R3BHPGeDetPoint);
+      return &instance;
+   }
+   TGenericClassInfo *GenerateInitInstance(const ::R3BHPGeDetPoint*)
+   {
+      return GenerateInitInstanceLocal((::R3BHPGeDetPoint*)0);
+   }
+   // Static variable to force the class initialization
+   static ::ROOT::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const ::R3BHPGeDetPoint*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+} // end of namespace ROOT
+
+namespace ROOT {
    static void *new_R3BDchPoint(void *p = 0);
    static void *newArray_R3BDchPoint(Long_t size, void *p);
    static void delete_R3BDchPoint(void *p);
@@ -660,7 +694,7 @@ namespace ROOT {
       ::R3BDchPoint *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BDchPoint >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BDchPoint", ::R3BDchPoint::Class_Version(), "", 1328,
+         instance("R3BDchPoint", ::R3BDchPoint::Class_Version(), "", 1560,
                   typeid(::R3BDchPoint), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BDchPoint::Dictionary, isa_proxy, 4,
                   sizeof(::R3BDchPoint) );
@@ -692,7 +726,7 @@ namespace ROOT {
       ::R3BDchFullPoint *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BDchFullPoint >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BDchFullPoint", ::R3BDchFullPoint::Class_Version(), "", 1475,
+         instance("R3BDchFullPoint", ::R3BDchFullPoint::Class_Version(), "", 1707,
                   typeid(::R3BDchFullPoint), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BDchFullPoint::Dictionary, isa_proxy, 4,
                   sizeof(::R3BDchFullPoint) );
@@ -724,7 +758,7 @@ namespace ROOT {
       ::R3BGfiPoint *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BGfiPoint >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BGfiPoint", ::R3BGfiPoint::Class_Version(), "", 1569,
+         instance("R3BGfiPoint", ::R3BGfiPoint::Class_Version(), "", 1801,
                   typeid(::R3BGfiPoint), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BGfiPoint::Dictionary, isa_proxy, 4,
                   sizeof(::R3BGfiPoint) );
@@ -756,7 +790,7 @@ namespace ROOT {
       ::R3BmTofPoint *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BmTofPoint >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BmTofPoint", ::R3BmTofPoint::Class_Version(), "", 1687,
+         instance("R3BmTofPoint", ::R3BmTofPoint::Class_Version(), "", 1919,
                   typeid(::R3BmTofPoint), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BmTofPoint::Dictionary, isa_proxy, 4,
                   sizeof(::R3BmTofPoint) );
@@ -788,7 +822,7 @@ namespace ROOT {
       ::R3BmTofDigi *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BmTofDigi >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BmTofDigi", ::R3BmTofDigi::Class_Version(), "", 1799,
+         instance("R3BmTofDigi", ::R3BmTofDigi::Class_Version(), "", 2031,
                   typeid(::R3BmTofDigi), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BmTofDigi::Dictionary, isa_proxy, 4,
                   sizeof(::R3BmTofDigi) );
@@ -820,7 +854,7 @@ namespace ROOT {
       ::R3BTofPoint *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BTofPoint >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BTofPoint", ::R3BTofPoint::Class_Version(), "", 1897,
+         instance("R3BTofPoint", ::R3BTofPoint::Class_Version(), "", 2129,
                   typeid(::R3BTofPoint), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BTofPoint::Dictionary, isa_proxy, 4,
                   sizeof(::R3BTofPoint) );
@@ -852,7 +886,7 @@ namespace ROOT {
       ::R3BVetoPoint *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BVetoPoint >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BVetoPoint", ::R3BVetoPoint::Class_Version(), "", 2011,
+         instance("R3BVetoPoint", ::R3BVetoPoint::Class_Version(), "", 2243,
                   typeid(::R3BVetoPoint), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BVetoPoint::Dictionary, isa_proxy, 4,
                   sizeof(::R3BVetoPoint) );
@@ -884,7 +918,7 @@ namespace ROOT {
       ::ELILuMonPoint *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::ELILuMonPoint >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("ELILuMonPoint", ::ELILuMonPoint::Class_Version(), "", 2134,
+         instance("ELILuMonPoint", ::ELILuMonPoint::Class_Version(), "", 2366,
                   typeid(::ELILuMonPoint), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::ELILuMonPoint::Dictionary, isa_proxy, 4,
                   sizeof(::ELILuMonPoint) );
@@ -916,7 +950,7 @@ namespace ROOT {
       ::R3BTraPoint *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BTraPoint >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BTraPoint", ::R3BTraPoint::Class_Version(), "", 2252,
+         instance("R3BTraPoint", ::R3BTraPoint::Class_Version(), "", 2484,
                   typeid(::R3BTraPoint), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BTraPoint::Dictionary, isa_proxy, 4,
                   sizeof(::R3BTraPoint) );
@@ -948,7 +982,7 @@ namespace ROOT {
       ::R3BTraHit *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BTraHit >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BTraHit", ::R3BTraHit::Class_Version(), "", 2383,
+         instance("R3BTraHit", ::R3BTraHit::Class_Version(), "", 2615,
                   typeid(::R3BTraHit), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BTraHit::Dictionary, isa_proxy, 4,
                   sizeof(::R3BTraHit) );
@@ -980,7 +1014,7 @@ namespace ROOT {
       ::R3BSitrackerHit *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BSitrackerHit >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BSitrackerHit", ::R3BSitrackerHit::Class_Version(), "", 2444,
+         instance("R3BSitrackerHit", ::R3BSitrackerHit::Class_Version(), "", 2676,
                   typeid(::R3BSitrackerHit), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BSitrackerHit::Dictionary, isa_proxy, 4,
                   sizeof(::R3BSitrackerHit) );
@@ -1012,7 +1046,7 @@ namespace ROOT {
       ::R3BTrackerHit *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BTrackerHit >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BTrackerHit", ::R3BTrackerHit::Class_Version(), "", 2544,
+         instance("R3BTrackerHit", ::R3BTrackerHit::Class_Version(), "", 2776,
                   typeid(::R3BTrackerHit), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BTrackerHit::Dictionary, isa_proxy, 4,
                   sizeof(::R3BTrackerHit) );
@@ -1044,7 +1078,7 @@ namespace ROOT {
       ::R3BStartrackPoint *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BStartrackPoint >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BStartrackPoint", ::R3BStartrackPoint::Class_Version(), "", 2645,
+         instance("R3BStartrackPoint", ::R3BStartrackPoint::Class_Version(), "", 2877,
                   typeid(::R3BStartrackPoint), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BStartrackPoint::Dictionary, isa_proxy, 4,
                   sizeof(::R3BStartrackPoint) );
@@ -1076,7 +1110,7 @@ namespace ROOT {
       ::R3BStartrackHit *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BStartrackHit >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BStartrackHit", ::R3BStartrackHit::Class_Version(), "", 2763,
+         instance("R3BStartrackHit", ::R3BStartrackHit::Class_Version(), "", 2995,
                   typeid(::R3BStartrackHit), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BStartrackHit::Dictionary, isa_proxy, 4,
                   sizeof(::R3BStartrackHit) );
@@ -1108,7 +1142,7 @@ namespace ROOT {
       ::R3BStartrackerDigitHit *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BStartrackerDigitHit >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BStartrackerDigitHit", ::R3BStartrackerDigitHit::Class_Version(), "", 2822,
+         instance("R3BStartrackerDigitHit", ::R3BStartrackerDigitHit::Class_Version(), "", 3054,
                   typeid(::R3BStartrackerDigitHit), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BStartrackerDigitHit::Dictionary, isa_proxy, 4,
                   sizeof(::R3BStartrackerDigitHit) );
@@ -1140,7 +1174,7 @@ namespace ROOT {
       ::R3BStartrackMappedData *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BStartrackMappedData >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BStartrackMappedData", ::R3BStartrackMappedData::Class_Version(), "", 2908,
+         instance("R3BStartrackMappedData", ::R3BStartrackMappedData::Class_Version(), "", 3140,
                   typeid(::R3BStartrackMappedData), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BStartrackMappedData::Dictionary, isa_proxy, 4,
                   sizeof(::R3BStartrackMappedData) );
@@ -1172,7 +1206,7 @@ namespace ROOT {
       ::R3BStartrackCalData *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BStartrackCalData >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BStartrackCalData", ::R3BStartrackCalData::Class_Version(), "", 3043,
+         instance("R3BStartrackCalData", ::R3BStartrackCalData::Class_Version(), "", 3275,
                   typeid(::R3BStartrackCalData), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BStartrackCalData::Dictionary, isa_proxy, 4,
                   sizeof(::R3BStartrackCalData) );
@@ -1204,7 +1238,7 @@ namespace ROOT {
       ::R3BLandPoint *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BLandPoint >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BLandPoint", ::R3BLandPoint::Class_Version(), "", 3142,
+         instance("R3BLandPoint", ::R3BLandPoint::Class_Version(), "", 3374,
                   typeid(::R3BLandPoint), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BLandPoint::Dictionary, isa_proxy, 4,
                   sizeof(::R3BLandPoint) );
@@ -1236,7 +1270,7 @@ namespace ROOT {
       ::R3BLandDigi *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BLandDigi >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BLandDigi", ::R3BLandDigi::Class_Version(), "", 3269,
+         instance("R3BLandDigi", ::R3BLandDigi::Class_Version(), "", 3501,
                   typeid(::R3BLandDigi), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BLandDigi::Dictionary, isa_proxy, 4,
                   sizeof(::R3BLandDigi) );
@@ -1268,7 +1302,7 @@ namespace ROOT {
       ::R3BLandFirstHits *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BLandFirstHits >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BLandFirstHits", ::R3BLandFirstHits::Class_Version(), "", 3373,
+         instance("R3BLandFirstHits", ::R3BLandFirstHits::Class_Version(), "", 3605,
                   typeid(::R3BLandFirstHits), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BLandFirstHits::Dictionary, isa_proxy, 4,
                   sizeof(::R3BLandFirstHits) );
@@ -1300,7 +1334,7 @@ namespace ROOT {
       ::R3BLandHit *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BLandHit >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BLandHit", ::R3BLandHit::Class_Version(), "", 3547,
+         instance("R3BLandHit", ::R3BLandHit::Class_Version(), "", 3779,
                   typeid(::R3BLandHit), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BLandHit::Dictionary, isa_proxy, 4,
                   sizeof(::R3BLandHit) );
@@ -1332,7 +1366,7 @@ namespace ROOT {
       ::R3BPaddleCrystalHit *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BPaddleCrystalHit >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BPaddleCrystalHit", ::R3BPaddleCrystalHit::Class_Version(), "", 3614,
+         instance("R3BPaddleCrystalHit", ::R3BPaddleCrystalHit::Class_Version(), "", 3846,
                   typeid(::R3BPaddleCrystalHit), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BPaddleCrystalHit::Dictionary, isa_proxy, 4,
                   sizeof(::R3BPaddleCrystalHit) );
@@ -1364,7 +1398,7 @@ namespace ROOT {
       ::R3BNeutronTrack *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BNeutronTrack >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BNeutronTrack", ::R3BNeutronTrack::Class_Version(), "", 3710,
+         instance("R3BNeutronTrack", ::R3BNeutronTrack::Class_Version(), "", 3942,
                   typeid(::R3BNeutronTrack), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BNeutronTrack::Dictionary, isa_proxy, 4,
                   sizeof(::R3BNeutronTrack) );
@@ -1396,7 +1430,7 @@ namespace ROOT {
       ::R3BDchDigi *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BDchDigi >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BDchDigi", ::R3BDchDigi::Class_Version(), "", 3809,
+         instance("R3BDchDigi", ::R3BDchDigi::Class_Version(), "", 4041,
                   typeid(::R3BDchDigi), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BDchDigi::Dictionary, isa_proxy, 4,
                   sizeof(::R3BDchDigi) );
@@ -1428,7 +1462,7 @@ namespace ROOT {
       ::R3BDch2pDigi *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BDch2pDigi >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BDch2pDigi", ::R3BDch2pDigi::Class_Version(), "", 3887,
+         instance("R3BDch2pDigi", ::R3BDch2pDigi::Class_Version(), "", 4119,
                   typeid(::R3BDch2pDigi), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BDch2pDigi::Dictionary, isa_proxy, 4,
                   sizeof(::R3BDch2pDigi) );
@@ -1460,7 +1494,7 @@ namespace ROOT {
       ::R3BTofDigi *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BTofDigi >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BTofDigi", ::R3BTofDigi::Class_Version(), "", 3990,
+         instance("R3BTofDigi", ::R3BTofDigi::Class_Version(), "", 4222,
                   typeid(::R3BTofDigi), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BTofDigi::Dictionary, isa_proxy, 4,
                   sizeof(::R3BTofDigi) );
@@ -1492,7 +1526,7 @@ namespace ROOT {
       ::R3BTof2pDigi *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BTof2pDigi >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BTof2pDigi", ::R3BTof2pDigi::Class_Version(), "", 4086,
+         instance("R3BTof2pDigi", ::R3BTof2pDigi::Class_Version(), "", 4318,
                   typeid(::R3BTof2pDigi), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BTof2pDigi::Dictionary, isa_proxy, 4,
                   sizeof(::R3BTof2pDigi) );
@@ -1524,7 +1558,7 @@ namespace ROOT {
       ::R3BGfiDigi *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BGfiDigi >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BGfiDigi", ::R3BGfiDigi::Class_Version(), "", 4224,
+         instance("R3BGfiDigi", ::R3BGfiDigi::Class_Version(), "", 4456,
                   typeid(::R3BGfiDigi), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BGfiDigi::Dictionary, isa_proxy, 4,
                   sizeof(::R3BGfiDigi) );
@@ -1556,7 +1590,7 @@ namespace ROOT {
       ::R3BTraDigi *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BTraDigi >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BTraDigi", ::R3BTraDigi::Class_Version(), "", 4291,
+         instance("R3BTraDigi", ::R3BTraDigi::Class_Version(), "", 4523,
                   typeid(::R3BTraDigi), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BTraDigi::Dictionary, isa_proxy, 4,
                   sizeof(::R3BTraDigi) );
@@ -1588,7 +1622,7 @@ namespace ROOT {
       ::R3BTra2pDigi *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BTra2pDigi >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BTra2pDigi", ::R3BTra2pDigi::Class_Version(), "", 4548,
+         instance("R3BTra2pDigi", ::R3BTra2pDigi::Class_Version(), "", 4780,
                   typeid(::R3BTra2pDigi), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BTra2pDigi::Dictionary, isa_proxy, 4,
                   sizeof(::R3BTra2pDigi) );
@@ -1620,7 +1654,7 @@ namespace ROOT {
       ::R3BTraFraDigi *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BTraFraDigi >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BTraFraDigi", ::R3BTraFraDigi::Class_Version(), "", 4805,
+         instance("R3BTraFraDigi", ::R3BTraFraDigi::Class_Version(), "", 5037,
                   typeid(::R3BTraFraDigi), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BTraFraDigi::Dictionary, isa_proxy, 4,
                   sizeof(::R3BTraFraDigi) );
@@ -1652,7 +1686,7 @@ namespace ROOT {
       ::R3BTargetDigi *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BTargetDigi >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BTargetDigi", ::R3BTargetDigi::Class_Version(), "", 4958,
+         instance("R3BTargetDigi", ::R3BTargetDigi::Class_Version(), "", 5190,
                   typeid(::R3BTargetDigi), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BTargetDigi::Dictionary, isa_proxy, 4,
                   sizeof(::R3BTargetDigi) );
@@ -1684,7 +1718,7 @@ namespace ROOT {
       ::R3BTarget2pDigi *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BTarget2pDigi >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BTarget2pDigi", ::R3BTarget2pDigi::Class_Version(), "", 5094,
+         instance("R3BTarget2pDigi", ::R3BTarget2pDigi::Class_Version(), "", 5326,
                   typeid(::R3BTarget2pDigi), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BTarget2pDigi::Dictionary, isa_proxy, 4,
                   sizeof(::R3BTarget2pDigi) );
@@ -1716,7 +1750,7 @@ namespace ROOT {
       ::R3BMfiPoint *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BMfiPoint >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BMfiPoint", ::R3BMfiPoint::Class_Version(), "", 5267,
+         instance("R3BMfiPoint", ::R3BMfiPoint::Class_Version(), "", 5499,
                   typeid(::R3BMfiPoint), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BMfiPoint::Dictionary, isa_proxy, 4,
                   sizeof(::R3BMfiPoint) );
@@ -1748,7 +1782,7 @@ namespace ROOT {
       ::R3BMfiDigi *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BMfiDigi >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BMfiDigi", ::R3BMfiDigi::Class_Version(), "", 5385,
+         instance("R3BMfiDigi", ::R3BMfiDigi::Class_Version(), "", 5617,
                   typeid(::R3BMfiDigi), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BMfiDigi::Dictionary, isa_proxy, 4,
                   sizeof(::R3BMfiDigi) );
@@ -1780,7 +1814,7 @@ namespace ROOT {
       ::R3BPspPoint *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BPspPoint >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BPspPoint", ::R3BPspPoint::Class_Version(), "", 5462,
+         instance("R3BPspPoint", ::R3BPspPoint::Class_Version(), "", 5694,
                   typeid(::R3BPspPoint), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BPspPoint::Dictionary, isa_proxy, 4,
                   sizeof(::R3BPspPoint) );
@@ -1812,7 +1846,7 @@ namespace ROOT {
       ::R3BPspDigi *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BPspDigi >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BPspDigi", ::R3BPspDigi::Class_Version(), "", 5578,
+         instance("R3BPspDigi", ::R3BPspDigi::Class_Version(), "", 5810,
                   typeid(::R3BPspDigi), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BPspDigi::Dictionary, isa_proxy, 4,
                   sizeof(::R3BPspDigi) );
@@ -1844,7 +1878,7 @@ namespace ROOT {
       ::R3BNeulandTacquilaMappedData *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BNeulandTacquilaMappedData >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BNeulandTacquilaMappedData", ::R3BNeulandTacquilaMappedData::Class_Version(), "", 5625,
+         instance("R3BNeulandTacquilaMappedData", ::R3BNeulandTacquilaMappedData::Class_Version(), "", 5857,
                   typeid(::R3BNeulandTacquilaMappedData), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BNeulandTacquilaMappedData::Dictionary, isa_proxy, 4,
                   sizeof(::R3BNeulandTacquilaMappedData) );
@@ -1876,7 +1910,7 @@ namespace ROOT {
       ::R3BNeulandCalData *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BNeulandCalData >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BNeulandCalData", ::R3BNeulandCalData::Class_Version(), "", 5682,
+         instance("R3BNeulandCalData", ::R3BNeulandCalData::Class_Version(), "", 5914,
                   typeid(::R3BNeulandCalData), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BNeulandCalData::Dictionary, isa_proxy, 4,
                   sizeof(::R3BNeulandCalData) );
@@ -1908,7 +1942,7 @@ namespace ROOT {
       ::R3BNeulandPoint *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BNeulandPoint >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BNeulandPoint", ::R3BNeulandPoint::Class_Version(), "", 5729,
+         instance("R3BNeulandPoint", ::R3BNeulandPoint::Class_Version(), "", 5961,
                   typeid(::R3BNeulandPoint), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BNeulandPoint::Dictionary, isa_proxy, 4,
                   sizeof(::R3BNeulandPoint) );
@@ -1940,7 +1974,7 @@ namespace ROOT {
       ::R3BNeulandHit *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BNeulandHit >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BNeulandHit", ::R3BNeulandHit::Class_Version(), "", 5797,
+         instance("R3BNeulandHit", ::R3BNeulandHit::Class_Version(), "", 6029,
                   typeid(::R3BNeulandHit), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BNeulandHit::Dictionary, isa_proxy, 4,
                   sizeof(::R3BNeulandHit) );
@@ -1972,7 +2006,7 @@ namespace ROOT {
       ::R3BNeulandMultiplicity *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BNeulandMultiplicity >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BNeulandMultiplicity", ::R3BNeulandMultiplicity::Class_Version(), "", 5859,
+         instance("R3BNeulandMultiplicity", ::R3BNeulandMultiplicity::Class_Version(), "", 6091,
                   typeid(::R3BNeulandMultiplicity), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BNeulandMultiplicity::Dictionary, isa_proxy, 4,
                   sizeof(::R3BNeulandMultiplicity) );
@@ -2004,7 +2038,7 @@ namespace ROOT {
       ::R3BNeulandCluster *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BNeulandCluster >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BNeulandCluster", ::R3BNeulandCluster::Class_Version(), "", 5902,
+         instance("R3BNeulandCluster", ::R3BNeulandCluster::Class_Version(), "", 6134,
                   typeid(::R3BNeulandCluster), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BNeulandCluster::Dictionary, isa_proxy, 4,
                   sizeof(::R3BNeulandCluster) );
@@ -2036,7 +2070,7 @@ namespace ROOT {
       ::R3BNeulandNeutron *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BNeulandNeutron >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BNeulandNeutron", ::R3BNeulandNeutron::Class_Version(), "", 5977,
+         instance("R3BNeulandNeutron", ::R3BNeulandNeutron::Class_Version(), "", 6209,
                   typeid(::R3BNeulandNeutron), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BNeulandNeutron::Dictionary, isa_proxy, 4,
                   sizeof(::R3BNeulandNeutron) );
@@ -2068,7 +2102,7 @@ namespace ROOT {
       ::R3BPspxMappedData *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BPspxMappedData >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BPspxMappedData", ::R3BPspxMappedData::Class_Version(), "", 6035,
+         instance("R3BPspxMappedData", ::R3BPspxMappedData::Class_Version(), "", 6267,
                   typeid(::R3BPspxMappedData), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BPspxMappedData::Dictionary, isa_proxy, 4,
                   sizeof(::R3BPspxMappedData) );
@@ -2100,7 +2134,7 @@ namespace ROOT {
       ::R3BPspxPrecalData *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BPspxPrecalData >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BPspxPrecalData", ::R3BPspxPrecalData::Class_Version(), "", 6089,
+         instance("R3BPspxPrecalData", ::R3BPspxPrecalData::Class_Version(), "", 6321,
                   typeid(::R3BPspxPrecalData), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BPspxPrecalData::Dictionary, isa_proxy, 4,
                   sizeof(::R3BPspxPrecalData) );
@@ -2132,7 +2166,7 @@ namespace ROOT {
       ::R3BPspxCalData *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BPspxCalData >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BPspxCalData", ::R3BPspxCalData::Class_Version(), "", 6144,
+         instance("R3BPspxCalData", ::R3BPspxCalData::Class_Version(), "", 6376,
                   typeid(::R3BPspxCalData), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BPspxCalData::Dictionary, isa_proxy, 4,
                   sizeof(::R3BPspxCalData) );
@@ -2164,7 +2198,7 @@ namespace ROOT {
       ::R3BPspxHitData *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BPspxHitData >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BPspxHitData", ::R3BPspxHitData::Class_Version(), "", 6197,
+         instance("R3BPspxHitData", ::R3BPspxHitData::Class_Version(), "", 6429,
                   typeid(::R3BPspxHitData), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BPspxHitData::Dictionary, isa_proxy, 4,
                   sizeof(::R3BPspxHitData) );
@@ -2196,7 +2230,7 @@ namespace ROOT {
       ::R3BLosMappedData *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BLosMappedData >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BLosMappedData", ::R3BLosMappedData::Class_Version(), "", 6244,
+         instance("R3BLosMappedData", ::R3BLosMappedData::Class_Version(), "", 6476,
                   typeid(::R3BLosMappedData), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BLosMappedData::Dictionary, isa_proxy, 4,
                   sizeof(::R3BLosMappedData) );
@@ -2228,7 +2262,7 @@ namespace ROOT {
       ::R3BLosCalData *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BLosCalData >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BLosCalData", ::R3BLosCalData::Class_Version(), "", 6293,
+         instance("R3BLosCalData", ::R3BLosCalData::Class_Version(), "", 6525,
                   typeid(::R3BLosCalData), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BLosCalData::Dictionary, isa_proxy, 4,
                   sizeof(::R3BLosCalData) );
@@ -2260,7 +2294,7 @@ namespace ROOT {
       ::R3BLosHitData *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BLosHitData >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BLosHitData", ::R3BLosHitData::Class_Version(), "", 6358,
+         instance("R3BLosHitData", ::R3BLosHitData::Class_Version(), "", 6590,
                   typeid(::R3BLosHitData), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BLosHitData::Dictionary, isa_proxy, 4,
                   sizeof(::R3BLosHitData) );
@@ -2292,7 +2326,7 @@ namespace ROOT {
       ::R3BRoluMappedData *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BRoluMappedData >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BRoluMappedData", ::R3BRoluMappedData::Class_Version(), "", 6408,
+         instance("R3BRoluMappedData", ::R3BRoluMappedData::Class_Version(), "", 6640,
                   typeid(::R3BRoluMappedData), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BRoluMappedData::Dictionary, isa_proxy, 4,
                   sizeof(::R3BRoluMappedData) );
@@ -2324,7 +2358,7 @@ namespace ROOT {
       ::R3BRoluCalData *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BRoluCalData >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BRoluCalData", ::R3BRoluCalData::Class_Version(), "", 6456,
+         instance("R3BRoluCalData", ::R3BRoluCalData::Class_Version(), "", 6688,
                   typeid(::R3BRoluCalData), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BRoluCalData::Dictionary, isa_proxy, 4,
                   sizeof(::R3BRoluCalData) );
@@ -2356,7 +2390,7 @@ namespace ROOT {
       ::R3BRoluHitData *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BRoluHitData >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BRoluHitData", ::R3BRoluHitData::Class_Version(), "", 6512,
+         instance("R3BRoluHitData", ::R3BRoluHitData::Class_Version(), "", 6744,
                   typeid(::R3BRoluHitData), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BRoluHitData::Dictionary, isa_proxy, 4,
                   sizeof(::R3BRoluHitData) );
@@ -2388,7 +2422,7 @@ namespace ROOT {
       ::R3BSci2MappedData *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BSci2MappedData >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BSci2MappedData", ::R3BSci2MappedData::Class_Version(), "", 6548,
+         instance("R3BSci2MappedData", ::R3BSci2MappedData::Class_Version(), "", 6780,
                   typeid(::R3BSci2MappedData), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BSci2MappedData::Dictionary, isa_proxy, 4,
                   sizeof(::R3BSci2MappedData) );
@@ -2420,7 +2454,7 @@ namespace ROOT {
       ::R3BSci2TcalData *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BSci2TcalData >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BSci2TcalData", ::R3BSci2TcalData::Class_Version(), "", 6589,
+         instance("R3BSci2TcalData", ::R3BSci2TcalData::Class_Version(), "", 6821,
                   typeid(::R3BSci2TcalData), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BSci2TcalData::Dictionary, isa_proxy, 4,
                   sizeof(::R3BSci2TcalData) );
@@ -2452,7 +2486,7 @@ namespace ROOT {
       ::R3BSci2CalData *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BSci2CalData >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BSci2CalData", ::R3BSci2CalData::Class_Version(), "", 6623,
+         instance("R3BSci2CalData", ::R3BSci2CalData::Class_Version(), "", 6855,
                   typeid(::R3BSci2CalData), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BSci2CalData::Dictionary, isa_proxy, 4,
                   sizeof(::R3BSci2CalData) );
@@ -2484,7 +2518,7 @@ namespace ROOT {
       ::R3BSci2HitData *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BSci2HitData >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BSci2HitData", ::R3BSci2HitData::Class_Version(), "", 6669,
+         instance("R3BSci2HitData", ::R3BSci2HitData::Class_Version(), "", 6901,
                   typeid(::R3BSci2HitData), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BSci2HitData::Dictionary, isa_proxy, 4,
                   sizeof(::R3BSci2HitData) );
@@ -2516,7 +2550,7 @@ namespace ROOT {
       ::R3BSci8MappedData *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BSci8MappedData >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BSci8MappedData", ::R3BSci8MappedData::Class_Version(), "", 6716,
+         instance("R3BSci8MappedData", ::R3BSci8MappedData::Class_Version(), "", 6948,
                   typeid(::R3BSci8MappedData), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BSci8MappedData::Dictionary, isa_proxy, 4,
                   sizeof(::R3BSci8MappedData) );
@@ -2548,7 +2582,7 @@ namespace ROOT {
       ::R3BSci8CalData *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BSci8CalData >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BSci8CalData", ::R3BSci8CalData::Class_Version(), "", 6770,
+         instance("R3BSci8CalData", ::R3BSci8CalData::Class_Version(), "", 7002,
                   typeid(::R3BSci8CalData), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BSci8CalData::Dictionary, isa_proxy, 4,
                   sizeof(::R3BSci8CalData) );
@@ -2580,7 +2614,7 @@ namespace ROOT {
       ::R3BSci8HitData *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BSci8HitData >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BSci8HitData", ::R3BSci8HitData::Class_Version(), "", 6829,
+         instance("R3BSci8HitData", ::R3BSci8HitData::Class_Version(), "", 7061,
                   typeid(::R3BSci8HitData), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BSci8HitData::Dictionary, isa_proxy, 4,
                   sizeof(::R3BSci8HitData) );
@@ -2612,7 +2646,7 @@ namespace ROOT {
       ::R3BActarPoint *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BActarPoint >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BActarPoint", ::R3BActarPoint::Class_Version(), "", 6882,
+         instance("R3BActarPoint", ::R3BActarPoint::Class_Version(), "", 7114,
                   typeid(::R3BActarPoint), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BActarPoint::Dictionary, isa_proxy, 4,
                   sizeof(::R3BActarPoint) );
@@ -2642,7 +2676,7 @@ namespace ROOT {
       ::R3BStrawtubesMappedData *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BStrawtubesMappedData >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BStrawtubesMappedData", ::R3BStrawtubesMappedData::Class_Version(), "", 6993,
+         instance("R3BStrawtubesMappedData", ::R3BStrawtubesMappedData::Class_Version(), "", 7225,
                   typeid(::R3BStrawtubesMappedData), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BStrawtubesMappedData::Dictionary, isa_proxy, 4,
                   sizeof(::R3BStrawtubesMappedData) );
@@ -2670,7 +2704,7 @@ namespace ROOT {
       ::R3BStrawtubesCalData *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BStrawtubesCalData >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BStrawtubesCalData", ::R3BStrawtubesCalData::Class_Version(), "", 7035,
+         instance("R3BStrawtubesCalData", ::R3BStrawtubesCalData::Class_Version(), "", 7267,
                   typeid(::R3BStrawtubesCalData), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BStrawtubesCalData::Dictionary, isa_proxy, 4,
                   sizeof(::R3BStrawtubesCalData) );
@@ -2698,7 +2732,7 @@ namespace ROOT {
       ::R3BStrawtubesHitData *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BStrawtubesHitData >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BStrawtubesHitData", ::R3BStrawtubesHitData::Class_Version(), "", 7076,
+         instance("R3BStrawtubesHitData", ::R3BStrawtubesHitData::Class_Version(), "", 7308,
                   typeid(::R3BStrawtubesHitData), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BStrawtubesHitData::Dictionary, isa_proxy, 4,
                   sizeof(::R3BStrawtubesHitData) );
@@ -2728,7 +2762,7 @@ namespace ROOT {
       ::R3BPaddleTamexMappedData *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BPaddleTamexMappedData >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BPaddleTamexMappedData", ::R3BPaddleTamexMappedData::Class_Version(), "", 7112,
+         instance("R3BPaddleTamexMappedData", ::R3BPaddleTamexMappedData::Class_Version(), "", 7344,
                   typeid(::R3BPaddleTamexMappedData), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BPaddleTamexMappedData::Dictionary, isa_proxy, 4,
                   sizeof(::R3BPaddleTamexMappedData) );
@@ -2760,7 +2794,7 @@ namespace ROOT {
       ::R3BTofdMappedData *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BTofdMappedData >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BTofdMappedData", ::R3BTofdMappedData::Class_Version(), "", 7191,
+         instance("R3BTofdMappedData", ::R3BTofdMappedData::Class_Version(), "", 7423,
                   typeid(::R3BTofdMappedData), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BTofdMappedData::Dictionary, isa_proxy, 4,
                   sizeof(::R3BTofdMappedData) );
@@ -2792,7 +2826,7 @@ namespace ROOT {
       ::R3BTofdCalData *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BTofdCalData >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BTofdCalData", ::R3BTofdCalData::Class_Version(), "", 7236,
+         instance("R3BTofdCalData", ::R3BTofdCalData::Class_Version(), "", 7468,
                   typeid(::R3BTofdCalData), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BTofdCalData::Dictionary, isa_proxy, 4,
                   sizeof(::R3BTofdCalData) );
@@ -2824,7 +2858,7 @@ namespace ROOT {
       ::R3BTofdHitData *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BTofdHitData >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BTofdHitData", ::R3BTofdHitData::Class_Version(), "", 7281,
+         instance("R3BTofdHitData", ::R3BTofdHitData::Class_Version(), "", 7513,
                   typeid(::R3BTofdHitData), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BTofdHitData::Dictionary, isa_proxy, 4,
                   sizeof(::R3BTofdHitData) );
@@ -2856,7 +2890,7 @@ namespace ROOT {
       ::R3BPaddleCalData *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BPaddleCalData >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BPaddleCalData", ::R3BPaddleCalData::Class_Version(), "", 7322,
+         instance("R3BPaddleCalData", ::R3BPaddleCalData::Class_Version(), "", 7554,
                   typeid(::R3BPaddleCalData), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BPaddleCalData::Dictionary, isa_proxy, 4,
                   sizeof(::R3BPaddleCalData) );
@@ -2888,7 +2922,7 @@ namespace ROOT {
       ::R3BTofdPoint *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BTofdPoint >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BTofdPoint", ::R3BTofdPoint::Class_Version(), "", 7429,
+         instance("R3BTofdPoint", ::R3BTofdPoint::Class_Version(), "", 7661,
                   typeid(::R3BTofdPoint), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BTofdPoint::Dictionary, isa_proxy, 4,
                   sizeof(::R3BTofdPoint) );
@@ -2920,7 +2954,7 @@ namespace ROOT {
       ::R3BTofdDigi *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BTofdDigi >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BTofdDigi", ::R3BTofdDigi::Class_Version(), "", 7541,
+         instance("R3BTofdDigi", ::R3BTofdDigi::Class_Version(), "", 7773,
                   typeid(::R3BTofdDigi), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BTofdDigi::Dictionary, isa_proxy, 4,
                   sizeof(::R3BTofdDigi) );
@@ -2952,7 +2986,7 @@ namespace ROOT {
       ::R3BPtofHit *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BPtofHit >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BPtofHit", ::R3BPtofHit::Class_Version(), "", 7628,
+         instance("R3BPtofHit", ::R3BPtofHit::Class_Version(), "", 7860,
                   typeid(::R3BPtofHit), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BPtofHit::Dictionary, isa_proxy, 4,
                   sizeof(::R3BPtofHit) );
@@ -2984,7 +3018,7 @@ namespace ROOT {
       ::R3BPdcMappedData *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BPdcMappedData >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BPdcMappedData", ::R3BPdcMappedData::Class_Version(), "", 7696,
+         instance("R3BPdcMappedData", ::R3BPdcMappedData::Class_Version(), "", 7928,
                   typeid(::R3BPdcMappedData), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BPdcMappedData::Dictionary, isa_proxy, 4,
                   sizeof(::R3BPdcMappedData) );
@@ -3016,7 +3050,7 @@ namespace ROOT {
       ::R3BPdcCalData *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BPdcCalData >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BPdcCalData", ::R3BPdcCalData::Class_Version(), "", 7739,
+         instance("R3BPdcCalData", ::R3BPdcCalData::Class_Version(), "", 7971,
                   typeid(::R3BPdcCalData), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BPdcCalData::Dictionary, isa_proxy, 4,
                   sizeof(::R3BPdcCalData) );
@@ -3048,7 +3082,7 @@ namespace ROOT {
       ::R3BPdcHitData *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BPdcHitData >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BPdcHitData", ::R3BPdcHitData::Class_Version(), "", 7783,
+         instance("R3BPdcHitData", ::R3BPdcHitData::Class_Version(), "", 8015,
                   typeid(::R3BPdcHitData), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BPdcHitData::Dictionary, isa_proxy, 4,
                   sizeof(::R3BPdcHitData) );
@@ -3080,7 +3114,7 @@ namespace ROOT {
       ::R3BBunchedFiberCalData *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BBunchedFiberCalData >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BBunchedFiberCalData", ::R3BBunchedFiberCalData::Class_Version(), "", 7828,
+         instance("R3BBunchedFiberCalData", ::R3BBunchedFiberCalData::Class_Version(), "", 8060,
                   typeid(::R3BBunchedFiberCalData), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BBunchedFiberCalData::Dictionary, isa_proxy, 4,
                   sizeof(::R3BBunchedFiberCalData) );
@@ -3112,7 +3146,7 @@ namespace ROOT {
       ::R3BBunchedFiberHitData *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BBunchedFiberHitData >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BBunchedFiberHitData", ::R3BBunchedFiberHitData::Class_Version(), "", 7878,
+         instance("R3BBunchedFiberHitData", ::R3BBunchedFiberHitData::Class_Version(), "", 8110,
                   typeid(::R3BBunchedFiberHitData), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BBunchedFiberHitData::Dictionary, isa_proxy, 4,
                   sizeof(::R3BBunchedFiberHitData) );
@@ -3144,7 +3178,7 @@ namespace ROOT {
       ::R3BBunchedFiberMappedData *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BBunchedFiberMappedData >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BBunchedFiberMappedData", ::R3BBunchedFiberMappedData::Class_Version(), "", 7939,
+         instance("R3BBunchedFiberMappedData", ::R3BBunchedFiberMappedData::Class_Version(), "", 8171,
                   typeid(::R3BBunchedFiberMappedData), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BBunchedFiberMappedData::Dictionary, isa_proxy, 4,
                   sizeof(::R3BBunchedFiberMappedData) );
@@ -3176,7 +3210,7 @@ namespace ROOT {
       ::R3BFi4Point *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BFi4Point >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BFi4Point", ::R3BFi4Point::Class_Version(), "", 7999,
+         instance("R3BFi4Point", ::R3BFi4Point::Class_Version(), "", 8231,
                   typeid(::R3BFi4Point), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BFi4Point::Dictionary, isa_proxy, 4,
                   sizeof(::R3BFi4Point) );
@@ -3208,7 +3242,7 @@ namespace ROOT {
       ::R3BFi4CalItem *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BFi4CalItem >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BFi4CalItem", ::R3BFi4CalItem::Class_Version(), "", 8109,
+         instance("R3BFi4CalItem", ::R3BFi4CalItem::Class_Version(), "", 8341,
                   typeid(::R3BFi4CalItem), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BFi4CalItem::Dictionary, isa_proxy, 4,
                   sizeof(::R3BFi4CalItem) );
@@ -3240,7 +3274,7 @@ namespace ROOT {
       ::R3BFi4HitItem *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BFi4HitItem >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BFi4HitItem", ::R3BFi4HitItem::Class_Version(), "", 8176,
+         instance("R3BFi4HitItem", ::R3BFi4HitItem::Class_Version(), "", 8408,
                   typeid(::R3BFi4HitItem), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BFi4HitItem::Dictionary, isa_proxy, 4,
                   sizeof(::R3BFi4HitItem) );
@@ -3272,7 +3306,7 @@ namespace ROOT {
       ::R3BFibMappedData *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BFibMappedData >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BFibMappedData", ::R3BFibMappedData::Class_Version(), "", 8241,
+         instance("R3BFibMappedData", ::R3BFibMappedData::Class_Version(), "", 8473,
                   typeid(::R3BFibMappedData), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BFibMappedData::Dictionary, isa_proxy, 4,
                   sizeof(::R3BFibMappedData) );
@@ -3304,7 +3338,7 @@ namespace ROOT {
       ::R3BFibCalData *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BFibCalData >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BFibCalData", ::R3BFibCalData::Class_Version(), "", 8323,
+         instance("R3BFibCalData", ::R3BFibCalData::Class_Version(), "", 8555,
                   typeid(::R3BFibCalData), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BFibCalData::Dictionary, isa_proxy, 4,
                   sizeof(::R3BFibCalData) );
@@ -3336,7 +3370,7 @@ namespace ROOT {
       ::R3BFibPoint *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BFibPoint >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BFibPoint", ::R3BFibPoint::Class_Version(), "", 8404,
+         instance("R3BFibPoint", ::R3BFibPoint::Class_Version(), "", 8636,
                   typeid(::R3BFibPoint), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BFibPoint::Dictionary, isa_proxy, 4,
                   sizeof(::R3BFibPoint) );
@@ -3368,7 +3402,7 @@ namespace ROOT {
       ::R3BAmsMappedData *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BAmsMappedData >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BAmsMappedData", ::R3BAmsMappedData::Class_Version(), "", 8517,
+         instance("R3BAmsMappedData", ::R3BAmsMappedData::Class_Version(), "", 8749,
                   typeid(::R3BAmsMappedData), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BAmsMappedData::Dictionary, isa_proxy, 4,
                   sizeof(::R3BAmsMappedData) );
@@ -3400,7 +3434,7 @@ namespace ROOT {
       ::R3BAmsStripCalData *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BAmsStripCalData >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BAmsStripCalData", ::R3BAmsStripCalData::Class_Version(), "", 8578,
+         instance("R3BAmsStripCalData", ::R3BAmsStripCalData::Class_Version(), "", 8810,
                   typeid(::R3BAmsStripCalData), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BAmsStripCalData::Dictionary, isa_proxy, 4,
                   sizeof(::R3BAmsStripCalData) );
@@ -3432,7 +3466,7 @@ namespace ROOT {
       ::R3BAmsHitData *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BAmsHitData >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BAmsHitData", ::R3BAmsHitData::Class_Version(), "", 8656,
+         instance("R3BAmsHitData", ::R3BAmsHitData::Class_Version(), "", 8888,
                   typeid(::R3BAmsHitData), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BAmsHitData::Dictionary, isa_proxy, 4,
                   sizeof(::R3BAmsHitData) );
@@ -3464,7 +3498,7 @@ namespace ROOT {
       ::R3BBeamMonitorMappedData *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BBeamMonitorMappedData >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BBeamMonitorMappedData", ::R3BBeamMonitorMappedData::Class_Version(), "", 8739,
+         instance("R3BBeamMonitorMappedData", ::R3BBeamMonitorMappedData::Class_Version(), "", 8971,
                   typeid(::R3BBeamMonitorMappedData), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BBeamMonitorMappedData::Dictionary, isa_proxy, 4,
                   sizeof(::R3BBeamMonitorMappedData) );
@@ -3496,7 +3530,7 @@ namespace ROOT {
       ::R3BMusicPoint *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BMusicPoint >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BMusicPoint", ::R3BMusicPoint::Class_Version(), "", 8792,
+         instance("R3BMusicPoint", ::R3BMusicPoint::Class_Version(), "", 9024,
                   typeid(::R3BMusicPoint), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BMusicPoint::Dictionary, isa_proxy, 4,
                   sizeof(::R3BMusicPoint) );
@@ -3528,7 +3562,7 @@ namespace ROOT {
       ::R3BMusicMappedData *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BMusicMappedData >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BMusicMappedData", ::R3BMusicMappedData::Class_Version(), "", 8917,
+         instance("R3BMusicMappedData", ::R3BMusicMappedData::Class_Version(), "", 9149,
                   typeid(::R3BMusicMappedData), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BMusicMappedData::Dictionary, isa_proxy, 4,
                   sizeof(::R3BMusicMappedData) );
@@ -3560,7 +3594,7 @@ namespace ROOT {
       ::R3BMusicCalData *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BMusicCalData >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BMusicCalData", ::R3BMusicCalData::Class_Version(), "", 8976,
+         instance("R3BMusicCalData", ::R3BMusicCalData::Class_Version(), "", 9208,
                   typeid(::R3BMusicCalData), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BMusicCalData::Dictionary, isa_proxy, 4,
                   sizeof(::R3BMusicCalData) );
@@ -3592,7 +3626,7 @@ namespace ROOT {
       ::R3BMusicHitData *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BMusicHitData >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BMusicHitData", ::R3BMusicHitData::Class_Version(), "", 9034,
+         instance("R3BMusicHitData", ::R3BMusicHitData::Class_Version(), "", 9266,
                   typeid(::R3BMusicHitData), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BMusicHitData::Dictionary, isa_proxy, 4,
                   sizeof(::R3BMusicHitData) );
@@ -3624,7 +3658,7 @@ namespace ROOT {
       ::R3BSamplerMappedData *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BSamplerMappedData >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BSamplerMappedData", ::R3BSamplerMappedData::Class_Version(), "", 9076,
+         instance("R3BSamplerMappedData", ::R3BSamplerMappedData::Class_Version(), "", 9308,
                   typeid(::R3BSamplerMappedData), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BSamplerMappedData::Dictionary, isa_proxy, 4,
                   sizeof(::R3BSamplerMappedData) );
@@ -3656,7 +3690,7 @@ namespace ROOT {
       ::R3BSfibMappedData *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BSfibMappedData >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BSfibMappedData", ::R3BSfibMappedData::Class_Version(), "", 9119,
+         instance("R3BSfibMappedData", ::R3BSfibMappedData::Class_Version(), "", 9351,
                   typeid(::R3BSfibMappedData), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BSfibMappedData::Dictionary, isa_proxy, 4,
                   sizeof(::R3BSfibMappedData) );
@@ -3688,7 +3722,7 @@ namespace ROOT {
       ::R3BSfibCalData *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BSfibCalData >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BSfibCalData", ::R3BSfibCalData::Class_Version(), "", 9171,
+         instance("R3BSfibCalData", ::R3BSfibCalData::Class_Version(), "", 9403,
                   typeid(::R3BSfibCalData), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BSfibCalData::Dictionary, isa_proxy, 4,
                   sizeof(::R3BSfibCalData) );
@@ -3720,7 +3754,7 @@ namespace ROOT {
       ::R3BSfibHitData *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BSfibHitData >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BSfibHitData", ::R3BSfibHitData::Class_Version(), "", 9218,
+         instance("R3BSfibHitData", ::R3BSfibHitData::Class_Version(), "", 9450,
                   typeid(::R3BSfibHitData), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BSfibHitData::Dictionary, isa_proxy, 4,
                   sizeof(::R3BSfibHitData) );
@@ -3752,7 +3786,7 @@ namespace ROOT {
       ::R3BFrsData *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::R3BFrsData >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("R3BFrsData", ::R3BFrsData::Class_Version(), "", 9272,
+         instance("R3BFrsData", ::R3BFrsData::Class_Version(), "", 9504,
                   typeid(::R3BFrsData), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::R3BFrsData::Dictionary, isa_proxy, 4,
                   sizeof(::R3BFrsData) );
@@ -4258,6 +4292,41 @@ TClass *R3BCalifaPoint::Dictionary()
 TClass *R3BCalifaPoint::Class()
 {
    if (!fgIsA.load()) { R__LOCKGUARD(gInterpreterMutex); fgIsA = ::ROOT::GenerateInitInstanceLocal((const ::R3BCalifaPoint*)0x0)->GetClass(); }
+   return fgIsA;
+}
+
+//______________________________________________________________________________
+atomic_TClass_ptr R3BHPGeDetPoint::fgIsA(0);  // static to hold class pointer
+
+//______________________________________________________________________________
+const char *R3BHPGeDetPoint::Class_Name()
+{
+   return "R3BHPGeDetPoint";
+}
+
+//______________________________________________________________________________
+const char *R3BHPGeDetPoint::ImplFileName()
+{
+   return ::ROOT::GenerateInitInstanceLocal((const ::R3BHPGeDetPoint*)0x0)->GetImplFileName();
+}
+
+//______________________________________________________________________________
+int R3BHPGeDetPoint::ImplFileLine()
+{
+   return ::ROOT::GenerateInitInstanceLocal((const ::R3BHPGeDetPoint*)0x0)->GetImplFileLine();
+}
+
+//______________________________________________________________________________
+TClass *R3BHPGeDetPoint::Dictionary()
+{
+   fgIsA = ::ROOT::GenerateInitInstanceLocal((const ::R3BHPGeDetPoint*)0x0)->GetClass();
+   return fgIsA;
+}
+
+//______________________________________________________________________________
+TClass *R3BHPGeDetPoint::Class()
+{
+   if (!fgIsA.load()) { R__LOCKGUARD(gInterpreterMutex); fgIsA = ::ROOT::GenerateInitInstanceLocal((const ::R3BHPGeDetPoint*)0x0)->GetClass(); }
    return fgIsA;
 }
 
@@ -8175,6 +8244,39 @@ namespace ROOT {
 } // end of namespace ROOT for class ::R3BCalifaPoint
 
 //______________________________________________________________________________
+void R3BHPGeDetPoint::Streamer(TBuffer &R__b)
+{
+   // Stream an object of class R3BHPGeDetPoint.
+
+   if (R__b.IsReading()) {
+      R__b.ReadClassBuffer(R3BHPGeDetPoint::Class(),this);
+   } else {
+      R__b.WriteClassBuffer(R3BHPGeDetPoint::Class(),this);
+   }
+}
+
+namespace ROOT {
+   // Wrappers around operator new
+   static void *new_R3BHPGeDetPoint(void *p) {
+      return  p ? new(p) ::R3BHPGeDetPoint : new ::R3BHPGeDetPoint;
+   }
+   static void *newArray_R3BHPGeDetPoint(Long_t nElements, void *p) {
+      return p ? new(p) ::R3BHPGeDetPoint[nElements] : new ::R3BHPGeDetPoint[nElements];
+   }
+   // Wrapper around operator delete
+   static void delete_R3BHPGeDetPoint(void *p) {
+      delete ((::R3BHPGeDetPoint*)p);
+   }
+   static void deleteArray_R3BHPGeDetPoint(void *p) {
+      delete [] ((::R3BHPGeDetPoint*)p);
+   }
+   static void destruct_R3BHPGeDetPoint(void *p) {
+      typedef ::R3BHPGeDetPoint current_t;
+      ((current_t*)p)->~current_t();
+   }
+} // end of namespace ROOT for class ::R3BHPGeDetPoint
+
+//______________________________________________________________________________
 void R3BDchPoint::Streamer(TBuffer &R__b)
 {
    // Stream an object of class R3BDchPoint.
@@ -11458,6 +11560,7 @@ namespace {
 "/work/R3BRoot/r3bdata",
 "/work/R3BRoot/r3bdata/xballData",
 "/work/R3BRoot/r3bdata/califaData",
+"/work/R3BRoot/r3bdata/hpgeData",
 "/work/R3BRoot/r3bdata/wrData",
 "/work/R3BRoot/r3bdata/beammonitorData",
 "/work/R3BRoot/r3bdata/dhcData",
@@ -11515,6 +11618,7 @@ class R3BCalifaCrystalCalData;
 class R3BCalifaMappedData;
 class R3BCalifaHitData;
 class R3BCalifaPoint;
+class __attribute__((annotate(R"ATTRDUMP(se ha de canviar la version cada vez que se hace una modificacion grande)ATTRDUMP"))) R3BHPGeDetPoint;
 class R3BDchPoint;
 class R3BDchFullPoint;
 class R3BGfiPoint;
@@ -12898,6 +13002,236 @@ class R3BCalifaPoint : public FairMCPoint
 
     ClassDef(R3BCalifaPoint, 2)
 };
+
+#endif
+// -------------------------------------------------------------------------
+// -----                  R3BHPGeDetPoint header file                  -----
+// -----                Created 11/09/12  by P.Cabanelas               -----
+// -------------------------------------------------------------------------
+
+
+/**  R3BHPGeDetPoint.h
+ **/
+
+
+#ifndef R3BHPGeDetPoint_H
+#define R3BHPGeDetPoint_H
+
+
+#include "TObject.h"
+#include "TVector3.h"
+
+#include "FairMCPoint.h"
+
+
+class R3BHPGeDetPoint : public FairMCPoint 
+{
+
+ public:
+  /** Default constructor **/
+  R3BHPGeDetPoint();
+
+
+  /** Constructor with arguments
+   *@param trackID         Index of MCTrack
+   *@param detID           Detector ID
+   *@param posIn           Coordinates at entrance to active volume [cm]
+   *@param posOut          Coordinates at exit of active volume [cm]
+   *@param momIn           Momentum of track at entrance [GeV]
+   *@param momOut          Momentum of track at exit [GeV]
+   *@param tof             Time since event start [ns]
+   *@param length          Track length since creation [cm]
+   *@param eLoss           Energy deposit [GeV]
+   **/
+  R3BHPGeDetPoint(Int_t trackID, Int_t detID, Int_t volid,
+              TVector3 posIn, TVector3 posOut, TVector3 momIn, TVector3 momOut,
+	      Double_t tof, Double_t length, Double_t eLoss);
+
+
+  /** Copy constructor **/
+  R3BHPGeDetPoint(const R3BHPGeDetPoint&);
+  
+  R3BHPGeDetPoint& operator=(const R3BHPGeDetPoint&) { return *this; }
+
+
+  /** Destructor **/
+  virtual ~R3BHPGeDetPoint();
+
+
+  /** Accessors **/
+  Int_t    GetDetectorId() const { return fDetectorID; }
+  Double_t GetXIn()        const { return fX; }
+  Double_t GetYIn()        const { return fY; }
+  Double_t GetZIn()        const { return fZ; }
+  Double_t GetXOut()       const { return fX_out; }
+  Double_t GetYOut()       const { return fY_out; }
+  Double_t GetZOut()       const { return fZ_out; }
+  Double_t GetPxOut()      const { return fPx_out; }
+  Double_t GetPyOut()      const { return fPy_out; }
+  Double_t GetPzOut()      const { return fPz_out; }
+  void PositionIn(TVector3& pos)  { pos.SetXYZ(fX, fY, fZ); }
+  void PositionOut(TVector3& pos) { pos.SetXYZ(fX_out,fY_out,fZ_out); }
+  void MomentumOut(TVector3& mom) { mom.SetXYZ(fPx_out,fPy_out,fPz_out); }
+
+
+  /** Point coordinates at given z from linear extrapolation **/
+  Double_t GetX(Double_t z) const;
+  Double_t GetY(Double_t z) const;
+
+
+  /** Check for distance between in and out **/
+  Bool_t IsUsable() const;
+
+
+  /** Modifiers **/
+  void SetPositionOut(TVector3 pos);
+  void SetMomentumOut(TVector3 mom);
+
+
+  /** Output to screen **/
+  virtual void Print(const Option_t* opt) const;
+
+
+
+ protected:
+  Double32_t fX_out,  fY_out,  fZ_out;
+  Double32_t fPx_out, fPy_out, fPz_out;
+  Int_t fDetectorId;
+
+  ClassDef(R3BHPGeDetPoint,2)  //se ha de canviar la version cada vez que se hace una modificacion grande
+};
+
+
+
+inline void R3BHPGeDetPoint::SetPositionOut(TVector3 pos) {
+  fX_out = pos.X();
+  fY_out = pos.Y();
+  fZ_out = pos.Z();
+}
+
+
+inline void R3BHPGeDetPoint::SetMomentumOut(TVector3 mom) {
+  fPx_out = mom.Px();
+  fPy_out = mom.Py();
+  fPz_out = mom.Pz();
+}
+
+
+
+#endif
+// -------------------------------------------------------------------------
+// -----                  R3BHPGeDetPoint header file                  -----
+// -----                Created 11/09/12  by P.Cabanelas               -----
+// -------------------------------------------------------------------------
+
+
+/**  R3BHPGeDetPoint.h
+ **/
+
+
+#ifndef R3BHPGeDetPoint_H
+#define R3BHPGeDetPoint_H
+
+
+#include "TObject.h"
+#include "TVector3.h"
+
+#include "FairMCPoint.h"
+
+
+class R3BHPGeDetPoint : public FairMCPoint 
+{
+
+ public:
+  /** Default constructor **/
+  R3BHPGeDetPoint();
+
+
+  /** Constructor with arguments
+   *@param trackID         Index of MCTrack
+   *@param detID           Detector ID
+   *@param posIn           Coordinates at entrance to active volume [cm]
+   *@param posOut          Coordinates at exit of active volume [cm]
+   *@param momIn           Momentum of track at entrance [GeV]
+   *@param momOut          Momentum of track at exit [GeV]
+   *@param tof             Time since event start [ns]
+   *@param length          Track length since creation [cm]
+   *@param eLoss           Energy deposit [GeV]
+   **/
+  R3BHPGeDetPoint(Int_t trackID, Int_t detID, Int_t volid,
+              TVector3 posIn, TVector3 posOut, TVector3 momIn, TVector3 momOut,
+	      Double_t tof, Double_t length, Double_t eLoss);
+
+
+  /** Copy constructor **/
+  R3BHPGeDetPoint(const R3BHPGeDetPoint&);
+  
+  R3BHPGeDetPoint& operator=(const R3BHPGeDetPoint&) { return *this; }
+
+
+  /** Destructor **/
+  virtual ~R3BHPGeDetPoint();
+
+
+  /** Accessors **/
+  Int_t    GetDetectorId() const { return fDetectorID; }
+  Double_t GetXIn()        const { return fX; }
+  Double_t GetYIn()        const { return fY; }
+  Double_t GetZIn()        const { return fZ; }
+  Double_t GetXOut()       const { return fX_out; }
+  Double_t GetYOut()       const { return fY_out; }
+  Double_t GetZOut()       const { return fZ_out; }
+  Double_t GetPxOut()      const { return fPx_out; }
+  Double_t GetPyOut()      const { return fPy_out; }
+  Double_t GetPzOut()      const { return fPz_out; }
+  void PositionIn(TVector3& pos)  { pos.SetXYZ(fX, fY, fZ); }
+  void PositionOut(TVector3& pos) { pos.SetXYZ(fX_out,fY_out,fZ_out); }
+  void MomentumOut(TVector3& mom) { mom.SetXYZ(fPx_out,fPy_out,fPz_out); }
+
+
+  /** Point coordinates at given z from linear extrapolation **/
+  Double_t GetX(Double_t z) const;
+  Double_t GetY(Double_t z) const;
+
+
+  /** Check for distance between in and out **/
+  Bool_t IsUsable() const;
+
+
+  /** Modifiers **/
+  void SetPositionOut(TVector3 pos);
+  void SetMomentumOut(TVector3 mom);
+
+
+  /** Output to screen **/
+  virtual void Print(const Option_t* opt) const;
+
+
+
+ protected:
+  Double32_t fX_out,  fY_out,  fZ_out;
+  Double32_t fPx_out, fPy_out, fPz_out;
+  Int_t fDetectorId;
+
+  ClassDef(R3BHPGeDetPoint,2)  //se ha de canviar la version cada vez que se hace una modificacion grande
+};
+
+
+
+inline void R3BHPGeDetPoint::SetPositionOut(TVector3 pos) {
+  fX_out = pos.X();
+  fY_out = pos.Y();
+  fZ_out = pos.Z();
+}
+
+
+inline void R3BHPGeDetPoint::SetMomentumOut(TVector3 mom) {
+  fPx_out = mom.Px();
+  fPy_out = mom.Py();
+  fPz_out = mom.Pz();
+}
+
+
 
 #endif
 /******************************************************************************
@@ -20884,6 +21218,7 @@ enum DetectorId
     kFI13,
     kSFI,
     kMUSIC,
+    kHPGE,//Added because of Ensar internship
 #ifdef SOFIA
     kSOFSCI,
     kSOFAT,
@@ -20898,7 +21233,6 @@ enum DetectorId
 #ifdef GTPC
     kGTPC,
 #endif
-    kHPGE,//Added because of Ensar internship
     kLAST
 };
 /** Unique identifier for all R3B Point and Hit types **/
@@ -20927,6 +21261,7 @@ enum fDetectorType
     kFI3aPoint,
     kFI3bPoint,
     kFI4Point,
+    kFI4tPoint,
     kFI6Point,
     kFI7Point,
     kFI8Point,
@@ -20936,9 +21271,10 @@ enum fDetectorType
     kFI12Point,
     kFI13Point,
     kSFIPoint,
-    kMUSICPoint
+    kMUSICPoint,
+    kHPGEPoint,
+    kHPGEHit,
 #ifdef SOFIA
-    ,
     kSOFSCIPoint,
     kSOFATPoint,
     kSOFTRIMPoint,
@@ -20956,8 +21292,6 @@ enum fDetectorType
     ,
     kGTPCPoint
 #endif
-    ,
-    kHPGEPoint //Added because of Ensar internship
 };
 
 enum SensorSide
@@ -20998,6 +21332,7 @@ enum SensorSide
 "R3BFrsData", payloadCode, "@",
 "R3BGfiDigi", payloadCode, "@",
 "R3BGfiPoint", payloadCode, "@",
+"R3BHPGeDetPoint", payloadCode, "@",
 "R3BHit", payloadCode, "@",
 "R3BLandDigi", payloadCode, "@",
 "R3BLandFirstHits", payloadCode, "@",

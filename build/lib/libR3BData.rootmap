@@ -27,6 +27,7 @@ class R3BFibPoint
 class R3BFrsData
 class R3BGfiDigi
 class R3BGfiPoint
+class R3BHPGeDetPoint
 class R3BHit
 class R3BLandDigi
 class R3BLandFirstHits

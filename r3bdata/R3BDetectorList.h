@@ -57,6 +57,7 @@ enum DetectorId
     kFI13,
     kSFI,
     kMUSIC,
+    kHPGE,//Added because of Ensar internship
 #ifdef SOFIA
     kSOFSCI,
     kSOFAT,
@@ -71,7 +72,6 @@ enum DetectorId
 #ifdef GTPC
     kGTPC,
 #endif
-    kHPGE,//Added because of Ensar internship
     kLAST
 };
 /** Unique identifier for all R3B Point and Hit types **/
@@ -100,6 +100,7 @@ enum fDetectorType
     kFI3aPoint,
     kFI3bPoint,
     kFI4Point,
+    kFI4tPoint,
     kFI6Point,
     kFI7Point,
     kFI8Point,
@@ -109,9 +110,10 @@ enum fDetectorType
     kFI12Point,
     kFI13Point,
     kSFIPoint,
-    kMUSICPoint
+    kMUSICPoint,
+    kHPGEPoint,
+    kHPGEHit,
 #ifdef SOFIA
-    ,
     kSOFSCIPoint,
     kSOFATPoint,
     kSOFTRIMPoint,
@@ -129,8 +131,6 @@ enum fDetectorType
     ,
     kGTPCPoint
 #endif
-    ,
-    kHPGEPoint //Added because of Ensar internship
 };
 
 enum SensorSide

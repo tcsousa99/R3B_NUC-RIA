@@ -326,6 +326,9 @@ if(NOT MODULE)
     add_subdirectory(passive)
     add_subdirectory(califa)
     #add_subdirectory(ctn)
+#------------------------------------------------------------------------#
+    add_subdirectory(hpge)
+#------------------------------------------------------------------------#
     add_subdirectory(xball)
     add_subdirectory(dch)
     add_subdirectory(gfi)

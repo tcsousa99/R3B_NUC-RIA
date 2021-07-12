@@ -7,6 +7,7 @@
 subdirs("r3bbase")
 subdirs("passive")
 subdirs("califa")
+subdirs("hpge")
 subdirs("xball")
 subdirs("dch")
 subdirs("gfi")

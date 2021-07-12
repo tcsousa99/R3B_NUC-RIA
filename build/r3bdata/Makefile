@@ -1019,6 +1019,60 @@ gfiData/R3BGfiPoint.cxx.s:
 	cd /work/R3BRoot/build && $(MAKE) -f r3bdata/CMakeFiles/R3BData.dir/build.make r3bdata/CMakeFiles/R3BData.dir/gfiData/R3BGfiPoint.cxx.s
 .PHONY : gfiData/R3BGfiPoint.cxx.s
 
+hpgeData/R3BHPGeDetHit.o: hpgeData/R3BHPGeDetHit.cxx.o
+
+.PHONY : hpgeData/R3BHPGeDetHit.o
+
+# target to build an object file
+hpgeData/R3BHPGeDetHit.cxx.o:
+	cd /work/R3BRoot/build && $(MAKE) -f r3bdata/CMakeFiles/R3BData.dir/build.make r3bdata/CMakeFiles/R3BData.dir/hpgeData/R3BHPGeDetHit.cxx.o
+.PHONY : hpgeData/R3BHPGeDetHit.cxx.o
+
+hpgeData/R3BHPGeDetHit.i: hpgeData/R3BHPGeDetHit.cxx.i
+
+.PHONY : hpgeData/R3BHPGeDetHit.i
+
+# target to preprocess a source file
+hpgeData/R3BHPGeDetHit.cxx.i:
+	cd /work/R3BRoot/build && $(MAKE) -f r3bdata/CMakeFiles/R3BData.dir/build.make r3bdata/CMakeFiles/R3BData.dir/hpgeData/R3BHPGeDetHit.cxx.i
+.PHONY : hpgeData/R3BHPGeDetHit.cxx.i
+
+hpgeData/R3BHPGeDetHit.s: hpgeData/R3BHPGeDetHit.cxx.s
+
+.PHONY : hpgeData/R3BHPGeDetHit.s
+
+# target to generate assembly for a file
+hpgeData/R3BHPGeDetHit.cxx.s:
+	cd /work/R3BRoot/build && $(MAKE) -f r3bdata/CMakeFiles/R3BData.dir/build.make r3bdata/CMakeFiles/R3BData.dir/hpgeData/R3BHPGeDetHit.cxx.s
+.PHONY : hpgeData/R3BHPGeDetHit.cxx.s
+
+hpgeData/R3BHPGeDetPoint.o: hpgeData/R3BHPGeDetPoint.cxx.o
+
+.PHONY : hpgeData/R3BHPGeDetPoint.o
+
+# target to build an object file
+hpgeData/R3BHPGeDetPoint.cxx.o:
+	cd /work/R3BRoot/build && $(MAKE) -f r3bdata/CMakeFiles/R3BData.dir/build.make r3bdata/CMakeFiles/R3BData.dir/hpgeData/R3BHPGeDetPoint.cxx.o
+.PHONY : hpgeData/R3BHPGeDetPoint.cxx.o
+
+hpgeData/R3BHPGeDetPoint.i: hpgeData/R3BHPGeDetPoint.cxx.i
+
+.PHONY : hpgeData/R3BHPGeDetPoint.i
+
+# target to preprocess a source file
+hpgeData/R3BHPGeDetPoint.cxx.i:
+	cd /work/R3BRoot/build && $(MAKE) -f r3bdata/CMakeFiles/R3BData.dir/build.make r3bdata/CMakeFiles/R3BData.dir/hpgeData/R3BHPGeDetPoint.cxx.i
+.PHONY : hpgeData/R3BHPGeDetPoint.cxx.i
+
+hpgeData/R3BHPGeDetPoint.s: hpgeData/R3BHPGeDetPoint.cxx.s
+
+.PHONY : hpgeData/R3BHPGeDetPoint.s
+
+# target to generate assembly for a file
+hpgeData/R3BHPGeDetPoint.cxx.s:
+	cd /work/R3BRoot/build && $(MAKE) -f r3bdata/CMakeFiles/R3BData.dir/build.make r3bdata/CMakeFiles/R3BData.dir/hpgeData/R3BHPGeDetPoint.cxx.s
+.PHONY : hpgeData/R3BHPGeDetPoint.cxx.s
+
 landData/R3BLandDigi.o: landData/R3BLandDigi.cxx.o
 
 .PHONY : landData/R3BLandDigi.o
@@ -3367,6 +3421,12 @@ help:
 	@echo "... gfiData/R3BGfiPoint.o"
 	@echo "... gfiData/R3BGfiPoint.i"
 	@echo "... gfiData/R3BGfiPoint.s"
+	@echo "... hpgeData/R3BHPGeDetHit.o"
+	@echo "... hpgeData/R3BHPGeDetHit.i"
+	@echo "... hpgeData/R3BHPGeDetHit.s"
+	@echo "... hpgeData/R3BHPGeDetPoint.o"
+	@echo "... hpgeData/R3BHPGeDetPoint.i"
+	@echo "... hpgeData/R3BHPGeDetPoint.s"
 	@echo "... landData/R3BLandDigi.o"
 	@echo "... landData/R3BLandDigi.i"
 	@echo "... landData/R3BLandDigi.s"

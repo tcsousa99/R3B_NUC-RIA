@@ -23,6 +23,9 @@ set(INCLUDE_DIRECTORIES
 ${R3BROOT_SOURCE_DIR}/r3bdata
 ${R3BROOT_SOURCE_DIR}/r3bdata/xballData
 ${R3BROOT_SOURCE_DIR}/r3bdata/califaData
+#----------------------------------------------------------------------------#
+${R3BROOT_SOURCE_DIR}/r3bdata/hpgeData
+#----------------------------------------------------------------------------#
 ${R3BROOT_SOURCE_DIR}/r3bdata/wrData
 ${R3BROOT_SOURCE_DIR}/r3bdata/beammonitorData
 ${R3BROOT_SOURCE_DIR}/r3bdata/dhcData
@@ -77,6 +80,10 @@ califaData/R3BCalifaCrystalCalData.cxx
 califaData/R3BCalifaMappedData.cxx
 califaData/R3BCalifaHitData.cxx
 califaData/R3BCalifaPoint.cxx
+#----------------------------------------------------------------------------#
+hpgeData/R3BHPGeDetHit.cxx
+hpgeData/R3BHPGeDetPoint.cxx
+#----------------------------------------------------------------------------#
 dchData/R3BDchPoint.cxx
 dchData/R3BDchFullPoint.cxx
 gfiData/R3BGfiPoint.cxx

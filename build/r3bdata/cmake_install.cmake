@@ -54,6 +54,8 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     "/work/R3BRoot/r3bdata/califaData/R3BCalifaMappedData.h"
     "/work/R3BRoot/r3bdata/califaData/R3BCalifaHitData.h"
     "/work/R3BRoot/r3bdata/califaData/R3BCalifaPoint.h"
+    "/work/R3BRoot/r3bdata/hpgeData/R3BHPGeDetHit.h"
+    "/work/R3BRoot/r3bdata/hpgeData/R3BHPGeDetPoint.h"
     "/work/R3BRoot/r3bdata/dchData/R3BDchPoint.h"
     "/work/R3BRoot/r3bdata/dchData/R3BDchFullPoint.h"
     "/work/R3BRoot/r3bdata/gfiData/R3BGfiPoint.h"

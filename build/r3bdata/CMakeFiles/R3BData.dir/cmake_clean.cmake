@@ -17,6 +17,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/R3BData.dir/califaData/R3BCalifaMappedData.cxx.o"
   "CMakeFiles/R3BData.dir/califaData/R3BCalifaHitData.cxx.o"
   "CMakeFiles/R3BData.dir/califaData/R3BCalifaPoint.cxx.o"
+  "CMakeFiles/R3BData.dir/hpgeData/R3BHPGeDetHit.cxx.o"
+  "CMakeFiles/R3BData.dir/hpgeData/R3BHPGeDetPoint.cxx.o"
   "CMakeFiles/R3BData.dir/dchData/R3BDchPoint.cxx.o"
   "CMakeFiles/R3BData.dir/dchData/R3BDchFullPoint.cxx.o"
   "CMakeFiles/R3BData.dir/gfiData/R3BGfiPoint.cxx.o"

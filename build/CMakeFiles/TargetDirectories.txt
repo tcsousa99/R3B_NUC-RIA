@@ -58,6 +58,14 @@
 /work/R3BRoot/build/califa/CMakeFiles/rebuild_cache.dir
 /work/R3BRoot/build/califa/CMakeFiles/test.dir
 /work/R3BRoot/build/califa/CMakeFiles/edit_cache.dir
+/work/R3BRoot/build/hpge/CMakeFiles/install/strip.dir
+/work/R3BRoot/build/hpge/CMakeFiles/install/local.dir
+/work/R3BRoot/build/hpge/CMakeFiles/install.dir
+/work/R3BRoot/build/hpge/CMakeFiles/list_install_components.dir
+/work/R3BRoot/build/hpge/CMakeFiles/R3BHPGeDet.dir
+/work/R3BRoot/build/hpge/CMakeFiles/rebuild_cache.dir
+/work/R3BRoot/build/hpge/CMakeFiles/test.dir
+/work/R3BRoot/build/hpge/CMakeFiles/edit_cache.dir
 /work/R3BRoot/build/xball/CMakeFiles/install/strip.dir
 /work/R3BRoot/build/xball/CMakeFiles/install/local.dir
 /work/R3BRoot/build/xball/CMakeFiles/install.dir

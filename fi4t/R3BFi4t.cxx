@@ -213,7 +213,7 @@ Bool_t R3BFi4t::ProcessHits(FairVolume* vol)
 
         // Increment number of Fi4Points for this track
         R3BStack* stack = (R3BStack*)gMC->GetStack();
-        stack->AddPoint(kFI4);
+        stack->AddPoint(kFI4t);
 
         ResetParameters();
     }
@@ -236,7 +236,7 @@ void R3BFi4t::EndOfEvent()
 // ----------------------------------------------------------------------------
 
 // -----   Public method Register   -------------------------------------------
-void R3BFi4t::Register() { FairRootManager::Instance()->Register("FI4Point", GetName(), fFi4Collection, kTRUE); }
+void R3BFi4t::Register() { FairRootManager::Instance()->Register("FI4tPoint", GetName(), fFi4Collection, kTRUE); }
 // ----------------------------------------------------------------------------
 
 // -----   Public method GetCollection   --------------------------------------
@@ -307,7 +307,7 @@ R3BFi4Point* R3BFi4t::AddHit(Int_t trackID,
 
 Bool_t R3BFi4t::CheckIfSensitive(std::string name)
 {
-    if (TString(name).Contains("FI41Log"))
+    if (TString(name).Contains("FI4t1Log"))
     {
         return kTRUE;
     }

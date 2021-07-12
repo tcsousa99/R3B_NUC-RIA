@@ -584,6 +584,19 @@ R3BCalifa/fast:
 .PHONY : R3BCalifa/fast
 
 #=============================================================================
+# Target rules for targets named R3BHPGeDet
+
+# Build rule for target.
+R3BHPGeDet: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 R3BHPGeDet
+.PHONY : R3BHPGeDet
+
+# fast build rule for target.
+R3BHPGeDet/fast:
+	$(MAKE) -f hpge/CMakeFiles/R3BHPGeDet.dir/build.make hpge/CMakeFiles/R3BHPGeDet.dir/build
+.PHONY : R3BHPGeDet/fast
+
+#=============================================================================
 # Target rules for targets named R3BXBall
 
 # Build rule for target.
@@ -1382,6 +1395,7 @@ help:
 	@echo "... R3Bbase"
 	@echo "... R3BPassive"
 	@echo "... R3BCalifa"
+	@echo "... R3BHPGeDet"
 	@echo "... R3BXBall"
 	@echo "... R3BDch"
 	@echo "... R3BGfi"

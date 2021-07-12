@@ -55,6 +55,7 @@ a31370538f2b72a02894630a683e995e fi9/G__R3BFi9Dict.cxx
 5a9a53d82a60834f1d5d8bcd66ed7c34 fiber/G__R3BBunchedFiberDict.cxx
 f05f35b4a1e9b95d89df0db966d445dd field/G__FieldDict.cxx
 9fcedeedad9bfe1847294786ece48183 gfi/G__R3BGfiDict.cxx
+a18c965e7594fe4456655e98e809e893 hpge/G__R3BHPGeDetDict.cxx
 76352f9c19017f3145c14bbad8da6cb6 land/G__R3BLandDict.cxx
 a86c8a6f4f84853d842b2c99dbc11479 los/G__R3BLosDict.cxx
 7105256391da061a3dc19368ce795687 lumon/G__ELILuMonDict.cxx
