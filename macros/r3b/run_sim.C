@@ -14,7 +14,7 @@ void run_sim()
     TString generator = generator1;
     TString inputFile = "";
 
-    Int_t nEvents = 10;
+    Int_t nEvents = 1;
     Bool_t storeTrajectories = kTRUE;
     Int_t randomSeed = 335566; // 0 for time-dependent random numbers
 
@@ -134,9 +134,9 @@ void run_sim()
         // 2- Define the BOX generator
         Int_t pdgId = 2212;     // proton beam
         Double32_t theta1 = 0.; // polar angle distribution
-        Double32_t theta2 = 2.;
+        Double32_t theta2 = 360.;
         Double32_t momentum = 1.5;
-        FairBoxGenerator* boxGen = new FairBoxGenerator(pdgId, 3);
+        FairBoxGenerator* boxGen = new FairBoxGenerator(pdgId, 30000);
         boxGen->SetThetaRange(theta1, theta2);
         boxGen->SetPRange(momentum, momentum * 1.2);
         boxGen->SetPhiRange(0, 360);
