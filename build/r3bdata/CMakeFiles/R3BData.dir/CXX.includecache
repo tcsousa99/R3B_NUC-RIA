@@ -203,10 +203,8 @@ FairMCPoint.h
 ../r3bdata/hpgeData/R3BHPGeDetHit.h
 TObject.h
 ../r3bdata/hpgeData/TObject.h
-TVector3.h
-../r3bdata/hpgeData/TVector3.h
-FairMCPoint.h
-../r3bdata/hpgeData/FairMCPoint.h
+FairMultiLinkedData.h
+../r3bdata/hpgeData/FairMultiLinkedData.h
 
 ../r3bdata/hpgeData/R3BHPGeDetPoint.h
 TObject.h
@@ -3939,10 +3937,8 @@ FairMCPoint.h
 /work/R3BRoot/build/r3bdata/FairMCPoint.h
 TObject.h
 /work/R3BRoot/build/r3bdata/TObject.h
-TVector3.h
-/work/R3BRoot/build/r3bdata/TVector3.h
-FairMCPoint.h
-/work/R3BRoot/build/r3bdata/FairMCPoint.h
+FairMultiLinkedData.h
+/work/R3BRoot/build/r3bdata/FairMultiLinkedData.h
 TObject.h
 /work/R3BRoot/build/r3bdata/TObject.h
 TVector3.h
@@ -4321,10 +4317,16 @@ TObject.h
 /work/R3BRoot/build/r3bdata/TObject.h
 
 /work/R3BRoot/r3bdata/hpgeData/R3BHPGeDetHit.cxx
-R3BHPGeDetPoint.h
-/work/R3BRoot/r3bdata/hpgeData/R3BHPGeDetPoint.h
+R3BHPGeDetHit.h
+/work/R3BRoot/r3bdata/hpgeData/R3BHPGeDetHit.h
 iostream
 -
+
+/work/R3BRoot/r3bdata/hpgeData/R3BHPGeDetHit.h
+TObject.h
+/work/R3BRoot/r3bdata/hpgeData/TObject.h
+FairMultiLinkedData.h
+/work/R3BRoot/r3bdata/hpgeData/FairMultiLinkedData.h
 
 /work/R3BRoot/r3bdata/hpgeData/R3BHPGeDetPoint.cxx
 R3BHPGeDetPoint.h

@@ -1,8 +1,8 @@
 // -------------------------------------------------------------------------
-// -----                      R3BHPGeDetPoint source file                  -----
+// -----                      R3BHPGeDetHit source file                  -----
 // -------------------------------------------------------------------------
 
-#include "R3BHPGeDetPoint.h"
+#include "R3BHPGeDetHit.h"
 
 #include <iostream>
 
@@ -12,10 +12,9 @@ using std::flush;
 
 
 // -----   Default constructor   -------------------------------------------
-R3BHPGeDetPoint::R3BHPGeDetPoint() 
-: FairMCPoint(),
- fX_out(0.), fY_out(0.), fZ_out(0.),
- fPx_out(0.), fPy_out(0.), fPz_out(0.)
+R3BHPGeDetHit::R3BHPGeDetHit() 
+  : FairMultiLinkedData(),
+  fEnergy(-1.), fTime(-1.) 
 {
 }
 // -------------------------------------------------------------------------
@@ -23,76 +22,38 @@ R3BHPGeDetPoint::R3BHPGeDetPoint()
 
 
 // -----   Standard constructor   ------------------------------------------
-R3BHPGeDetPoint::R3BHPGeDetPoint(Int_t trackID, Int_t detID, Int_t volid,
-  TVector3 posIn, TVector3 posOut, TVector3 momIn, TVector3 momOut,
-  Double_t tof, Double_t length, Double_t eLoss) 
-: FairMCPoint(trackID, detID, posIn, momIn, tof, length, eLoss),
-fX_out(posOut.X()), fY_out(posOut.Y()), fZ_out(posOut.Z()),
-fPx_out(momOut.Px()), fPy_out(momOut.Py()), fPz_out(momOut.Pz())
+R3BHPGeDetHit::R3BHPGeDetHit(Double_t energy, Double_t time) 
+  : FairMultiLinkedData(),
+    fEnergy(energy), fTime(time)
 {
 }
 // -------------------------------------------------------------------------
 
-R3BHPGeDetPoint::R3BHPGeDetPoint(const R3BHPGeDetPoint& right)
-: FairMCPoint(right),
-fX_out(right.fX_out), fY_out(right.fY_out), fZ_out(right.fZ_out),
-fPx_out(right.fPx_out), fPy_out(right.fPy_out), fPz_out(right.fPz_out)
+R3BHPGeDetHit::R3BHPGeDetHit(const R3BHPGeDetHit& right)
+  : FairMultiLinkedData(right),
+    fEnergy(right.fEnergy), fTime(right.fTime)
 {
 }
-// -------------------------------------------------------------------------
-
+//--------------------------------------------------------------------------
 
 
 // -----   Destructor   ----------------------------------------------------
-R3BHPGeDetPoint::~R3BHPGeDetPoint() { }
+R3BHPGeDetHit::~R3BHPGeDetHit() 
+{
+}
 // -------------------------------------------------------------------------
+
 
 
 
 // -----   Public method Print   -------------------------------------------
-void R3BHPGeDetPoint::Print(const Option_t* opt) const {
-  cout << "-I- R3BHPGeDetPoint: STS Point for track " << fTrackID 
-       << " in detector " << fDetectorID << endl;
-  cout << "    Position (" << fX << ", " << fY << ", " << fZ
-       << ") cm" << endl;
-  cout << "    Momentum (" << fPx << ", " << fPy << ", " << fPz
-       << ") GeV" << endl;
-  cout << "    Time " << fTime << " ns,  Length " << fLength 
-       << " cm,  Energy loss " << fELoss*1.0e06 << " keV" << endl;
+void R3BHPGeDetHit::Print(const Option_t* opt) const {
+  cout << "-I- : R3BHPGeDetHit a Hit in the HPGe detector with:" << endl;
+  cout << "    Energy = " << fEnergy << " GeV " << endl;
+  cout << "    Time =" << fTime << " ns  " << endl;
 }
 // -------------------------------------------------------------------------
 
 
+ClassImp(R3BHPGeDetHit)
 
-// -----   Point x coordinate from linear extrapolation   ------------------
-Double_t R3BHPGeDetPoint::GetX(Double_t z) const {
-  //  cout << fZ << " " << z << " " << fZ_out << endl;
-  if ( (fZ_out-z)*(fZ-z) >= 0. ) return (fX_out+fX)/2.;
-  Double_t dz = fZ_out - fZ;
-  return ( fX + (z-fZ) / dz * (fX_out-fX) );
-}
-// -------------------------------------------------------------------------
-
-
-
-// -----   Point y coordinate from linear extrapolation   ------------------
-Double_t R3BHPGeDetPoint::GetY(Double_t z) const {
-  if ( (fZ_out-z)*(fZ-z) >= 0. ) return (fY_out+fY)/2.;
-  Double_t dz = fZ_out - fZ;
-  //  if ( TMath::Abs(dz) < 1.e-3 ) return (fY_out+fY)/2.;
-  return ( fY + (z-fZ) / dz * (fY_out-fY) );
-}
-// -------------------------------------------------------------------------
-
-
-
-// -----   Public method IsUsable   ----------------------------------------
-Bool_t R3BHPGeDetPoint::IsUsable() const {
-  Double_t dz = fZ_out - fZ;
-  if ( TMath::Abs(dz) < 1.e-4 ) return kFALSE;
-  return kTRUE;
-}
-// -------------------------------------------------------------------------
-
-
-ClassImp(R3BHPGeDetPoint)

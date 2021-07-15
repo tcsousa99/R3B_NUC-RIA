@@ -1,86 +1,55 @@
 // -------------------------------------------------------------------------
-// -----                  R3BHPGeDetPoint header file                  -----
-// -----                Created 11/09/12  by P.Cabanelas               -----
+// -----                  R3BHPGeDetHit header file                  -----
+// -----                Created 04/09/19  by P.Cabanelas               -----
 // -------------------------------------------------------------------------
 
 
-/**  R3BHPGeDetPoint.h
+/**  R3BHPGeDetHit.h
  **/
 
 
-#ifndef R3BHPGeDetPoint_H
-#define R3BHPGeDetPoint_H
+#ifndef R3BHPGeDetHit_H
+#define R3BHPGeDetHit_H
 
 
 #include "TObject.h"
-#include "TVector3.h"
-
-#include "FairMCPoint.h"
+#include "FairMultiLinkedData.h"
 
 
-class R3BHPGeDetPoint : public FairMCPoint 
+class R3BHPGeDetHit : public FairMultiLinkedData
 {
 
  public:
+
   /** Default constructor **/
-  R3BHPGeDetPoint();
+  R3BHPGeDetHit();
 
 
   /** Constructor with arguments
-   *@param trackID         Index of MCTrack
-   *@param detID           Detector ID
-   *@param posIn           Coordinates at entrance to active volume [cm]
-   *@param posOut          Coordinates at exit of active volume [cm]
-   *@param momIn           Momentum of track at entrance [GeV]
-   *@param momOut          Momentum of track at exit [GeV]
-   *@param tof             Time since event start [ns]
-   *@param length          Track length since creation [cm]
-   *@param eLoss           Energy deposit [GeV]
+   *@param fEnergy         Energy deposit [GeV]
+   *@param fTime           Time since event start [ns]
    **/
-  R3BHPGeDetPoint(Int_t trackID, Int_t detID, Int_t volid,
-              TVector3 posIn, TVector3 posOut, TVector3 momIn, TVector3 momOut,
-	      Double_t tof, Double_t length, Double_t eLoss);
+  R3BHPGeDetHit(Double_t energy, Double_t time);
 
 
   /** Copy constructor **/
-  R3BHPGeDetPoint(const R3BHPGeDetPoint&);
+  R3BHPGeDetHit(const R3BHPGeDetHit&);
   
-  R3BHPGeDetPoint& operator=(const R3BHPGeDetPoint&) { return *this; }
+  R3BHPGeDetHit& operator=(const R3BHPGeDetHit&){return *this;}
 
 
   /** Destructor **/
-  virtual ~R3BHPGeDetPoint();
+  virtual ~R3BHPGeDetHit();
 
 
   /** Accessors **/
-  Int_t    GetDetectorId() const { return fDetectorID; }
-  Double_t GetXIn()        const { return fX; }
-  Double_t GetYIn()        const { return fY; }
-  Double_t GetZIn()        const { return fZ; }
-  Double_t GetXOut()       const { return fX_out; }
-  Double_t GetYOut()       const { return fY_out; }
-  Double_t GetZOut()       const { return fZ_out; }
-  Double_t GetPxOut()      const { return fPx_out; }
-  Double_t GetPyOut()      const { return fPy_out; }
-  Double_t GetPzOut()      const { return fPz_out; }
-  void PositionIn(TVector3& pos)  { pos.SetXYZ(fX, fY, fZ); }
-  void PositionOut(TVector3& pos) { pos.SetXYZ(fX_out,fY_out,fZ_out); }
-  void MomentumOut(TVector3& mom) { mom.SetXYZ(fPx_out,fPy_out,fPz_out); }
-
-
-  /** Point coordinates at given z from linear extrapolation **/
-  Double_t GetX(Double_t z) const;
-  Double_t GetY(Double_t z) const;
-
-
-  /** Check for distance between in and out **/
-  Bool_t IsUsable() const;
-
+  Double_t GetEnergy()        const { return fEnergy; }
+  Double_t GetTime()          const { return fTime; }
 
   /** Modifiers **/
-  void SetPositionOut(TVector3 pos);
-  void SetMomentumOut(TVector3 mom);
-
+  void SetEnergy(Double32_t energy) { fEnergy = energy; }
+  void SetTime(Double32_t time)     { fTime = time; }
+  void AddEnergy(Double32_t energy) { fEnergy += energy; }
 
   /** Output to screen **/
   virtual void Print(const Option_t* opt) const;
@@ -88,28 +57,12 @@ class R3BHPGeDetPoint : public FairMCPoint
 
 
  protected:
-  Double32_t fX_out,  fY_out,  fZ_out;
-  Double32_t fPx_out, fPy_out, fPz_out;
-  Int_t fDetectorId;
+  Double32_t fEnergy;    //total energy in the crystal
+  Double32_t fTime;      //time of the interaction
+ 
+  ClassDef(R3BHPGeDetHit,2)  //se ha de canviar la version cada vez que se hace una modificacion grande
 
-  ClassDef(R3BHPGeDetPoint,2)  //se ha de canviar la version cada vez que se hace una modificacion grande
 };
-
-
-
-inline void R3BHPGeDetPoint::SetPositionOut(TVector3 pos) {
-  fX_out = pos.X();
-  fY_out = pos.Y();
-  fZ_out = pos.Z();
-}
-
-
-inline void R3BHPGeDetPoint::SetMomentumOut(TVector3 mom) {
-  fPx_out = mom.Px();
-  fPy_out = mom.Py();
-  fPz_out = mom.Pz();
-}
-
 
 
 #endif

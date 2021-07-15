@@ -7,8 +7,8 @@
 
 #include "R3BHPGeDet.h"
 
-//#include "R3BHPGeDetPoint.h"
-//#include "R3BHPGeDetHit.h"
+#include "R3BHPGeDetPoint.h"
+#include "R3BHPGeDetHit.h"
 #include "R3BMCStack.h" //changed from "EnsarMCStack"
 
 #include "FairGeoInterface.h"
