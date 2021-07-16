@@ -1,0 +1,36 @@
+ Generating stack trace...
+ 0x00007eff1246c5ed in TG4RunManager::ConfigureRunManager() at /FairSoft/transport/geant4_vmc/source/run/src/TG4RunManager.cxx:202 from /opt/fairsoft/lib/libgeant4vmc.so
+ 0x00007eff1246d45a in TG4RunManager::TG4RunManager(TG4RunConfiguration*, int, char**) at /FairSoft/transport/geant4_vmc/source/run/src/TG4RunManager.cxx:128 from /opt/fairsoft/lib/libgeant4vmc.so
+ 0x00007eff1246ea9b in TGeant4::TGeant4(char const*, char const*, TG4RunConfiguration*, int, char**) at /FairSoft/transport/geant4_vmc/source/run/src/TGeant4.cxx:234 (discriminator 3) from /opt/fairsoft/lib/libgeant4vmc.so
+ 0x00007eff2ce642e2 in <unknown function>
+ 0x00007eff2ce6406a in <unknown function>
+ 0x00007eff274e3fec in <unknown> from /opt/fairsoft/lib/root/libCling.so
+ 0x00007eff274e87d3 in cling::Interpreter::EvaluateInternal(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, cling::CompilationOptions, cling::Value*, cling::Transaction**, unsigned long) at /FairSoft/tools/root/interpreter/cling/lib/Interpreter/Interpreter.cpp:1275 from /opt/fairsoft/lib/root/libCling.so
+ 0x00007eff274e8a49 in cling::Interpreter::process(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, cling::Value*, cling::Transaction**, bool) at /FairSoft/tools/root/interpreter/cling/lib/Interpreter/Interpreter.cpp:723 from /opt/fairsoft/lib/root/libCling.so
+ 0x00007eff275897bf in cling::MetaProcessor::process(llvm::StringRef, cling::Interpreter::CompilationResult&, cling::Value*, bool) at /FairSoft/tools/root/interpreter/cling/lib/MetaProcessor/MetaProcessor.cpp:341 from /opt/fairsoft/lib/root/libCling.so
+ 0x00007eff2745554a in <unknown> from /opt/fairsoft/lib/root/libCling.so
+ 0x00007eff2746c68b in <unknown> from /opt/fairsoft/lib/root/libCling.so
+ 0x00007eff2c5a807d in TApplication::ProcessLine(char const*, bool, int*) at /FairSoft/tools/root/core/base/src/TApplication.cxx:1031 from /opt/fairsoft/lib/root/libCore.so.6.16
+ 0x00007eff2c5244ad in TROOT::ProcessLine(char const*, int*) at /FairSoft/tools/root/core/base/src/TROOT.cxx:2367 from /opt/fairsoft/lib/root/libCore.so.6.16
+ 0x00007eff1ed0cd99 in FairGenericVMCConfig::Setup(char const*) at /FairRoot/base/sim/FairGenericVMCConfig.cxx:164 from /opt/fairroot/lib/libBase.so.18.2.0
+ 0x00007eff1ece81c2 in FairRunSim::SetMCConfig() at /FairRoot/base/steer/FairRunSim.cxx:299 from /opt/fairroot/lib/libBase.so.18.2.0
+ 0x00007eff1ece9b5c in FairRunSim::Init() at /FairRoot/base/steer/FairRunSim.cxx:248 from /opt/fairroot/lib/libBase.so.18.2.0
+ 0x00007eff2ce8153b in <unknown function>
+ 0x00007eff2ceab06a in <unknown function>
+ 0x00007eff274e3fec in <unknown> from /opt/fairsoft/lib/root/libCling.so
+ 0x00007eff274e87d3 in cling::Interpreter::EvaluateInternal(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, cling::CompilationOptions, cling::Value*, cling::Transaction**, unsigned long) at /FairSoft/tools/root/interpreter/cling/lib/Interpreter/Interpreter.cpp:1275 from /opt/fairsoft/lib/root/libCling.so
+ 0x00007eff274e9871 in cling::Interpreter::echo(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, cling::Value*) at /FairSoft/tools/root/interpreter/cling/lib/Interpreter/Interpreter.cpp:922 from /opt/fairsoft/lib/root/libCling.so
+ 0x00007eff275905fb in cling::MetaSema::actOnxCommand(llvm::StringRef, llvm::StringRef, cling::Value*) at /FairSoft/tools/root/interpreter/cling/lib/MetaProcessor/MetaSema.cpp:145 from /opt/fairsoft/lib/root/libCling.so
+ 0x00007eff2759f299 in cling::MetaParser::isXCommand(cling::MetaSema::ActionResult&, cling::Value*) at /FairSoft/tools/root/interpreter/cling/lib/MetaProcessor/MetaParser.cpp:288 from /opt/fairsoft/lib/root/libCling.so
+ 0x00007eff275a04de in cling::MetaParser::isCommand(cling::MetaSema::ActionResult&, cling::Value*) at /FairSoft/tools/root/interpreter/cling/lib/MetaProcessor/MetaParser.cpp:124 from /opt/fairsoft/lib/root/libCling.so
+ 0x00007eff27589751 in cling::MetaProcessor::process(llvm::StringRef, cling::Interpreter::CompilationResult&, cling::Value*, bool) at /FairSoft/tools/root/interpreter/cling/lib/MetaProcessor/MetaProcessor.cpp:316 (discriminator 1) from /opt/fairsoft/lib/root/libCling.so
+ 0x00007eff2745554a in <unknown> from /opt/fairsoft/lib/root/libCling.so
+ 0x00007eff2746c8a1 in <unknown> from /opt/fairsoft/lib/root/libCling.so
+ 0x00007eff2745d1c6 in <unknown> from /opt/fairsoft/lib/root/libCling.so
+ 0x00007eff2c5a8d17 in TApplication::ExecuteFile(char const*, int*, bool) at /FairSoft/tools/root/core/base/src/TApplication.cxx:1161 from /opt/fairsoft/lib/root/libCore.so.6.16
+ 0x00007eff2c5a8483 in TApplication::ProcessLine(char const*, bool, int*) at /FairSoft/tools/root/core/base/src/TApplication.cxx:1012 from /opt/fairsoft/lib/root/libCore.so.6.16
+ 0x00007eff2ca7bd1e in TRint::ProcessLineNr(char const*, char const*, int*) at /FairSoft/tools/root/core/rint/src/TRint.cxx:762 from /opt/fairsoft/lib/root/libRint.so.6.16
+ 0x00007eff2ca7d417 in TRint::Run(bool) at /FairSoft/tools/root/core/rint/src/TRint.cxx:421 from /opt/fairsoft/lib/root/libRint.so.6.16
+ 0x000055e68edb5a7c in <unknown> from /opt/fairsoft/bin/root.exe
+ 0x00007eff2b5672e1 in __libc_start_main + 0xf1 from /lib/x86_64-linux-gnu/libc.so.6
+ 0x000055e68edb5ada in _start + 0x2a from /opt/fairsoft/bin/root.exe

@@ -1,0 +1,21 @@
+ Generating stack trace...
+ 0x00007f288e1c0c0e in R3BHPGeDet::R3BHPGeDet(TString const&, bool) at /work/R3BRoot/hpge/R3BHPGeDet.cxx:63 (discriminator 4) from /work/R3BRoot/build/lib/libR3BHPGeDet.so.SOVERSION
+ 0x00007f28a41986b4 in <unknown function>
+ 0x00007f28a41c406a in <unknown function>
+ 0x00007f289e7fcfec in <unknown> from /opt/fairsoft/lib/root/libCling.so
+ 0x00007f289e8017d3 in cling::Interpreter::EvaluateInternal(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, cling::CompilationOptions, cling::Value*, cling::Transaction**, unsigned long) at /FairSoft/tools/root/interpreter/cling/lib/Interpreter/Interpreter.cpp:1275 from /opt/fairsoft/lib/root/libCling.so
+ 0x00007f289e802871 in cling::Interpreter::echo(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, cling::Value*) at /FairSoft/tools/root/interpreter/cling/lib/Interpreter/Interpreter.cpp:922 from /opt/fairsoft/lib/root/libCling.so
+ 0x00007f289e8a95fb in cling::MetaSema::actOnxCommand(llvm::StringRef, llvm::StringRef, cling::Value*) at /FairSoft/tools/root/interpreter/cling/lib/MetaProcessor/MetaSema.cpp:145 from /opt/fairsoft/lib/root/libCling.so
+ 0x00007f289e8b8299 in cling::MetaParser::isXCommand(cling::MetaSema::ActionResult&, cling::Value*) at /FairSoft/tools/root/interpreter/cling/lib/MetaProcessor/MetaParser.cpp:288 from /opt/fairsoft/lib/root/libCling.so
+ 0x00007f289e8b94de in cling::MetaParser::isCommand(cling::MetaSema::ActionResult&, cling::Value*) at /FairSoft/tools/root/interpreter/cling/lib/MetaProcessor/MetaParser.cpp:124 from /opt/fairsoft/lib/root/libCling.so
+ 0x00007f289e8a2751 in cling::MetaProcessor::process(llvm::StringRef, cling::Interpreter::CompilationResult&, cling::Value*, bool) at /FairSoft/tools/root/interpreter/cling/lib/MetaProcessor/MetaProcessor.cpp:316 (discriminator 1) from /opt/fairsoft/lib/root/libCling.so
+ 0x00007f289e76e54a in <unknown> from /opt/fairsoft/lib/root/libCling.so
+ 0x00007f289e7858a1 in <unknown> from /opt/fairsoft/lib/root/libCling.so
+ 0x00007f289e7761c6 in <unknown> from /opt/fairsoft/lib/root/libCling.so
+ 0x00007f28a38c1d17 in TApplication::ExecuteFile(char const*, int*, bool) at /FairSoft/tools/root/core/base/src/TApplication.cxx:1161 from /opt/fairsoft/lib/root/libCore.so.6.16
+ 0x00007f28a38c1483 in TApplication::ProcessLine(char const*, bool, int*) at /FairSoft/tools/root/core/base/src/TApplication.cxx:1012 from /opt/fairsoft/lib/root/libCore.so.6.16
+ 0x00007f28a3d94d1e in TRint::ProcessLineNr(char const*, char const*, int*) at /FairSoft/tools/root/core/rint/src/TRint.cxx:762 from /opt/fairsoft/lib/root/libRint.so.6.16
+ 0x00007f28a3d96417 in TRint::Run(bool) at /FairSoft/tools/root/core/rint/src/TRint.cxx:421 from /opt/fairsoft/lib/root/libRint.so.6.16
+ 0x000055dc0fd5da7c in <unknown> from /opt/fairsoft/bin/root.exe
+ 0x00007f28a28802e1 in __libc_start_main + 0xf1 from /lib/x86_64-linux-gnu/libc.so.6
+ 0x000055dc0fd5dada in _start + 0x2a from /opt/fairsoft/bin/root.exe

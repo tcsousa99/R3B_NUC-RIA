@@ -56,6 +56,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../r3bdata/sfibData"
   "../r3bdata/musicData"
   "../r3bdata/frsData"
+  "../r3bdata/hpgeData"
   "../tracker_rene"
   "/opt/fairsoft/include/root6"
   "/opt/fairsoft/include"

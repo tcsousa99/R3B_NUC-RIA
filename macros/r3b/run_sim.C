@@ -76,9 +76,11 @@ void run_sim()
     //run->AddModule(califa);
 
     //HPGe
-   // R3BDetector* hpge = new R3BHPGeDet("HPGedetector_single.geo.root");
+    //R3BDetector* hpge = new R3BHPGeDet("HPGedetector_ctn_test.geo.root",true);
     //run->AddModule(new EnsarHPGeDet("HPGedetector_ctn_test.geo.root",true)); //EnsarHPGeDet
     //run->AddModule(hpge); //EnsarHPGeDet
+    //run->AddModule(new R3BHPGeDet("HPGedetector_ctn_test.geo.root", true));
+
     // Fi4 detector
     run->AddModule(new R3BFi4t("fi4_v17a.geo.root",
                               { -73.274339 - TMath::Tan(TMath::DegToRad() * 16.7) * 100, 0.069976, 513.649524 + 100. },

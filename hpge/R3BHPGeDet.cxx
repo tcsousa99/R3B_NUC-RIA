@@ -97,6 +97,7 @@ void R3BHPGeDet::Initialize()
   TGeoVolume *vol = gGeoManager->GetVolume("CtnWorld");
   vol->SetVisibility(kFALSE);
 }
+
 //-------------------------------------------------------------------------
 
 

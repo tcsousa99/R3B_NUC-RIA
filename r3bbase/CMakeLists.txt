@@ -51,6 +51,7 @@ ${R3BROOT_SOURCE_DIR}/r3bdata/sampData
 ${R3BROOT_SOURCE_DIR}/r3bdata/sfibData
 ${R3BROOT_SOURCE_DIR}/r3bdata/musicData
 ${R3BROOT_SOURCE_DIR}/r3bdata/frsData
+${R3BROOT_SOURCE_DIR}/r3bdata/hpgeData
 ${R3BROOT_SOURCE_DIR}/tracker_rene
 )
 
